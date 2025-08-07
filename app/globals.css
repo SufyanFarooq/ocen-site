@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Scheme Variables */
+:root {
+  --color-primary: #3E5C76;      /* Steel Blue */
+  --color-secondary: #6C7A89;    /* Slate Gray */
+  --color-accent: #FF6B35;       /* Industrial Orange */
+  --color-background: #F0F3F4;   /* Cloud White */
+  --color-text: #212121;         /* Blackened Gray */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-[#F0F3F4] to-[#E8ECEF] min-h-screen font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+
+  p, span, div {
+    @apply font-inter;
+  }
+}
+
+@layer components {
+  .ocean-bg {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, #4A6B8A 100%);
+  }
+  
+  .wave-bg {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), #7A8B9A, #B8C2CC);
+    background-size: 400% 400%;
+    animation: waveGradient 8s ease infinite;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .ocean-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20;
+  }
+  
+  .ocean-button {
+    @apply bg-gradient-to-r from-[#3E5C76] to-[#4A6B8A] text-white px-8 py-3 rounded-full font-semibold hover:from-[#4A6B8A] hover:to-[#5A7B9A] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-poppins;
+  }
+  
+  .ocean-text-gradient {
+    @apply bg-gradient-to-r from-[#3E5C76] to-[#4A6B8A] bg-clip-text text-transparent;
+  }
+
+  .hero-title {
+    @apply font-poppins font-bold tracking-tight;
+  }
+
+  .hero-subtitle {
+    @apply font-poppins font-semibold;
+  }
+
+  .hero-description {
+    @apply font-inter font-medium;
+  }
+}
+
+@keyframes waveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-secondary), var(--color-primary));
+}
