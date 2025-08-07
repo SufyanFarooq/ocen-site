@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { ArrowRight, Ship, Globe, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [imageError, setImageError] = useState(false)
+  const [imageLoading, setImageLoading] = useState(true)
 
   const slides = [
     {
@@ -90,13 +93,29 @@ const Hero = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             className="absolute inset-0"
-            style={{
-              backgroundImage: `url(${slides[currentSlide].image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
           >
+            {/* Fallback gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#3E5C76] via-[#6C7A89] to-[#8B9CA8]"></div>
+            
+            <Image
+              src={slides[currentSlide].image}
+              alt={slides[currentSlide].title}
+              fill
+              priority={currentSlide === 0}
+              quality={85}
+              sizes="100vw"
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center',
+              }}
+              onLoad={() => setImageLoading(false)}
+              onError={() => {
+                setImageError(true)
+                setImageLoading(false)
+              }}
+              className={`transition-opacity duration-1000 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+            />
+            
             {/* Gradient overlay for better text readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#3E5C76]/80 via-[#6C7A89]/60 to-transparent"></div>
             

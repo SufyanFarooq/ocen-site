@@ -694,7 +694,7 @@ export default function Home() {
       </section>
 
       {/* Our Process Section */}
-      <section className="py-20 bg-gradient-to-br from-[#F0F3F4] to-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-[#3E5C76] to-[#4A6B8A] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -702,90 +702,285 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#212121] mb-6 font-poppins">
-              Our <span className="text-[#3E5C76]">Process</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
+              Our <span className="text-[#FF6B35]">Process</span>
             </h2>
+            <p className="text-xl text-[#E8ECEF] max-w-3xl mx-auto font-inter">
+              A systematic approach to delivering exceptional sourcing solutions
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                number: '1',
-                title: 'Discovery',
-                description: 'We do an online call to discuss your needs',
-                icon: '🔍'
-              },
-              {
-                number: '2',
-                title: 'Hunt',
-                description: 'We take your requirements and find the best supplier and price',
-                icon: '🎯'
-              },
-              {
-                number: '3',
-                title: 'Quote',
-                description: 'We get you a quote for your goods & shipping',
-                icon: '📋'
-              },
-              {
-                number: '4',
-                title: 'Sampling',
-                description: 'Where needed, we arrange samples for you',
-                icon: '📦'
-              },
-              {
-                number: '5',
-                title: 'Shipping',
-                description: 'Once you are happy and payment is made, we book in your shipping',
-                icon: '🚢'
-              },
-              {
-                number: '6',
-                title: 'Delivery',
-                description: 'Order arrives at your warehouse',
-                icon: '✅'
-              },
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-3xl p-8 shadow-xl border border-[#E8ECEF] text-center group relative"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                {/* Step Number */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 bg-[#FF6B35] rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                  {step.number}
-                </div>
+          <div className="relative w-full max-w-4xl mx-auto h-[400px] md:h-[600px] flex items-center justify-center px-4">
+            {/* Central Circle */}
+            <motion.div
+              className="relative w-32 h-32 md:w-48 md:h-48 bg-white/10 backdrop-blur-sm rounded-full flex flex-col items-center justify-center border-2 border-white/20 shadow-2xl z-20"
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
+              <div className="text-center text-white px-2">
+                <h3 className="text-sm md:text-lg font-bold font-poppins mb-1 md:mb-2">Review client brief</h3>
+                <h4 className="text-sm md:text-lg font-bold font-poppins mb-1 md:mb-2">& scope of work</h4>
+                <p className="text-xs md:text-sm text-[#E8ECEF] font-inter">Ensure clarity around outputs</p>
+              </div>
+            </motion.div>
+
+            {/* Process Segments - Mobile Version */}
+            <div className="absolute inset-0 block md:hidden">
+              {[
+                {
+                  id: 1,
+                  title: "Discovery",
+                  description: "We do an online call to discuss your needs",
+                  icon: "🔍",
+                  angle: -90,
+                  color: "from-[#FF6B35] to-[#E55A2B]",
+                  delay: 0.1
+                },
+                {
+                  id: 2,
+                  title: "Hunt",
+                  description: "We take your requirements and find the best supplier and price",
+                  icon: "🎯",
+                  angle: -18,
+                  color: "from-[#3E5C76] to-[#4A6B8A]",
+                  delay: 0.2
+                },
+                {
+                  id: 3,
+                  title: "Quote",
+                  description: "We get you a quote for your goods & shipping",
+                  icon: "📋",
+                  angle: 54,
+                  color: "from-[#6C7A89] to-[#7A8B9A]",
+                  delay: 0.3
+                },
+                {
+                  id: 4,
+                  title: "Sampling",
+                  description: "Where needed, we arrange samples for you",
+                  icon: "📦",
+                  angle: 126,
+                  color: "from-[#3E5C76] to-[#4A6B8A]",
+                  delay: 0.4
+                },
+                {
+                  id: 5,
+                  title: "Shipping",
+                  description: "Once you are happy and payment is made, we book in your shipping",
+                  icon: "🚢",
+                  angle: 198,
+                  color: "from-[#FF6B35] to-[#E55A2B]",
+                  delay: 0.5
+                }
+              ].map((step, index) => {
+                const radius = 120;
+                const x = Math.cos((step.angle) * Math.PI / 180) * radius;
+                const y = Math.sin((step.angle) * Math.PI / 180) * radius;
                 
-                <div className="w-16 h-16 bg-gradient-to-br from-[#3E5C76] to-[#4A6B8A] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-2xl">{step.icon}</span>
-                </div>
+                return (
+                  <motion.div
+                    key={step.id}
+                    className="absolute w-32 h-32"
+                    style={{
+                      left: `calc(50% + ${x}px - 64px)`,
+                      top: `calc(50% + ${y}px - 64px)`,
+                    }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: step.delay }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className={`w-full h-full bg-gradient-to-br ${step.color} rounded-2xl shadow-2xl border-2 border-white/20 relative overflow-hidden`}>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-3 text-center">
+                        <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mb-2 backdrop-blur-sm">
+                          <span className="text-xl">{step.icon}</span>
+                        </div>
+                        <h3 className="text-sm font-bold font-poppins">{step.title}</h3>
+                      </div>
+                      <div className="absolute -top-3 -right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-white/30 z-10">
+                        <span className="text-[#3E5C76] font-bold text-sm">{step.id}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Process Segments - Desktop Version */}
+            <div className="absolute inset-0 hidden md:block">
+              {[
+                {
+                  id: 1,
+                  title: "Discovery",
+                  description: "We do an online call to discuss your needs",
+                  icon: "🔍",
+                  angle: -90,
+                  color: "from-[#FF6B35] to-[#E55A2B]",
+                  delay: 0.1
+                },
+                {
+                  id: 2,
+                  title: "Hunt",
+                  description: "We take your requirements and find the best supplier and price",
+                  icon: "🎯",
+                  angle: -18,
+                  color: "from-[#3E5C76] to-[#4A6B8A]",
+                  delay: 0.2
+                },
+                {
+                  id: 3,
+                  title: "Quote",
+                  description: "We get you a quote for your goods & shipping",
+                  icon: "📋",
+                  angle: 54,
+                  color: "from-[#6C7A89] to-[#7A8B9A]",
+                  delay: 0.3
+                },
+                {
+                  id: 4,
+                  title: "Sampling",
+                  description: "Where needed, we arrange samples for you",
+                  icon: "📦",
+                  angle: 126,
+                  color: "from-[#3E5C76] to-[#4A6B8A]",
+                  delay: 0.4
+                },
+                {
+                  id: 5,
+                  title: "Shipping",
+                  description: "Once you are happy and payment is made, we book in your shipping",
+                  icon: "🚢",
+                  angle: 198,
+                  color: "from-[#FF6B35] to-[#E55A2B]",
+                  delay: 0.5
+                }
+              ].map((step, index) => {
+                const radius = 200;
+                const x = Math.cos((step.angle) * Math.PI / 180) * radius;
+                const y = Math.sin((step.angle) * Math.PI / 180) * radius;
                 
-                <h3 className="text-xl font-bold text-[#212121] mb-4 font-poppins group-hover:text-[#3E5C76] transition-colors duration-300">
-                  {step.title}
-                </h3>
+                return (
+                  <motion.div
+                    key={step.id}
+                    className="absolute w-48 h-48"
+                    style={{
+                      left: `calc(50% + ${x}px - 96px)`,
+                      top: `calc(50% + ${y}px - 96px)`,
+                    }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: step.delay }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className={`w-full h-full bg-gradient-to-br ${step.color} rounded-3xl shadow-2xl border-2 border-white/20 relative overflow-hidden`}>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
+                        <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-4 backdrop-blur-sm">
+                          <span className="text-3xl">{step.icon}</span>
+                        </div>
+                        <h3 className="text-xl font-bold font-poppins mb-2">{step.title}</h3>
+                        <p className="text-sm font-inter text-white/90 leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
+                      <div className="absolute -top-3 -right-3 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-white/30 z-10">
+                        <span className="text-[#3E5C76] font-bold text-lg">{step.id}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Connection Lines - Desktop only */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none hidden md:block">
+              {[0, 72, 144, 216, 288].map((angle, index) => {
+                const radius = 200;
+                const x1 = Math.cos((angle - 90) * Math.PI / 180) * radius;
+                const y1 = Math.sin((angle - 90) * Math.PI / 180) * radius;
+                const nextAngle = angle + 72;
+                const x2 = Math.cos((nextAngle - 90) * Math.PI / 180) * radius;
+                const y2 = Math.sin((nextAngle - 90) * Math.PI / 180) * radius;
                 
-                <p className="text-[#6C7A89] leading-relaxed font-inter">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
+                return (
+                  <motion.path
+                    key={index}
+                    d={`M ${500 + x1} ${300 + y1} Q 500 300 ${500 + x2} ${300 + y2}`}
+                    stroke="white"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeDasharray="10,5"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    whileInView={{ pathLength: 1, opacity: 0.6 }}
+                    transition={{ duration: 1.5, delay: 0.8 + index * 0.1 }}
+                  />
+                );
+              })}
+            </svg>
+
+            {/* Animated Dots - Desktop only */}
+            {[0, 72, 144, 216, 288].map((angle, index) => {
+              const radius = 200;
+              const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
+              const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
+              
+              return (
+                <motion.div
+                  key={index}
+                  className="absolute w-4 h-4 bg-[#FF6B35] rounded-full shadow-lg hidden md:block"
+                  style={{
+                    left: `calc(50% + ${x}px - 8px)`,
+                    top: `calc(50% + ${y}px - 8px)`,
+                  }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [1, 0.8, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: 1.2 + index * 0.4,
+                  }}
+                />
+              );
+            })}
           </div>
+
+          {/* Process Summary */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
+          >
+            <div className="text-center text-white">
+              <div className="text-4xl font-bold text-[#FF6B35] mb-2 font-poppins">5</div>
+              <div className="text-lg text-[#E8ECEF] font-inter">Process Steps</div>
+            </div>
+            <div className="text-center text-white">
+              <div className="text-4xl font-bold text-[#FF6B35] mb-2 font-poppins">24/7</div>
+              <div className="text-lg text-[#E8ECEF] font-inter">Support Available</div>
+            </div>
+            <div className="text-center text-white">
+              <div className="text-4xl font-bold text-[#FF6B35] mb-2 font-poppins">100%</div>
+              <div className="text-lg text-[#E8ECEF] font-inter">Quality Assured</div>
+            </div>
+          </motion.div>
 
           <motion.div
             className="text-center mt-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.8 }}
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#FF6B35] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
             >
-              Request A Quote
+              Start Your Process
             </motion.button>
           </motion.div>
         </div>
@@ -803,94 +998,251 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-[#212121] mb-6 font-poppins">
               <span className="text-[#3E5C76]">Global Solutions</span>
             </h2>
+            <p className="text-xl text-[#6C7A89] max-w-3xl mx-auto font-inter">
+              Connecting businesses worldwide with our extensive network of suppliers and partners
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                region: 'Oceania',
-                cities: 'Sydney, Melbourne, Brisbane,...',
-                color: 'from-[#3E5C76] to-[#4A6B8A]'
-              },
-              {
-                region: 'US',
-                cities: 'Los Angeles, Long Beach, Savannah, Charleston, Norfolk, Houston, Baltimore, Boston, Tampa,...',
-                color: 'from-[#6C7A89] to-[#7A8B9A]'
-              },
-              {
-                region: 'South America',
-                cities: 'Manzanillo, Ensenada, Buenaventur, Callao, San Antonio, Puerto Quetzal',
-                color: 'from-[#FF6B35] to-[#E55A2B]'
-              },
-              {
-                region: 'EU - MED',
-                cities: 'Hamburg, Rotterdam, Antwerp, Szczecin, Lehavre, Dunkirk, Southampton, Felixstowe, Gdansk, Immingham, Valencia, Genoa, LaSpezia, FOS, Livorno,...',
-                color: 'from-[#3E5C76] to-[#4A6B8A]'
-              },
-              {
-                region: 'Middle East',
-                cities: 'Jebbel Ali, Sharjah, Bahrain, Sohar, Hamad,...',
-                color: 'from-[#6C7A89] to-[#7A8B9A]'
-              },
-              {
-                region: 'India',
-                cities: 'Nhava Sheva, Mundra, Mundra, Chennai, Cochin, Kolkata',
-                color: 'from-[#FF6B35] to-[#E55A2B]'
-              },
-              {
-                region: 'China',
-                cities: 'Ningbo, Xiamen, Xingang, Qingdao, Fuzhou, Shanghai, Dalian, Shenzeng, Hongkong',
-                color: 'from-[#3E5C76] to-[#4A6B8A]'
-              },
-              {
-                region: 'Thailand',
-                cities: 'Bangkok, Laem Chabang,',
-                color: 'from-[#6C7A89] to-[#7A8B9A]'
-              },
-              {
-                region: 'Malaysia',
-                cities: 'Port Klang (North & West), Penang',
-                color: 'from-[#FF6B35] to-[#E55A2B]'
-              },
-              {
-                region: 'Philippines',
-                cities: 'Manila',
-                color: 'from-[#3E5C76] to-[#4A6B8A]'
-              },
-              {
-                region: 'Korea',
-                cities: 'Incheon, Pusan',
-                color: 'from-[#6C7A89] to-[#7A8B9A]'
-              },
-            ].map((location, index) => (
+          {/* World Map Container */}
+          <div className="relative w-full h-[600px] bg-gradient-to-br from-[#F0F3F4] to-[#E8ECEF] rounded-3xl overflow-hidden shadow-2xl border border-[#E8ECEF]">
+            {/* World Map Background */}
+            <div className="absolute inset-0 opacity-10">
+              <svg viewBox="0 0 1000 500" className="w-full h-full">
+                <path d="M150,200 Q200,180 250,200 T350,200 Q400,220 450,200 T550,200 Q600,180 650,200 T750,200 Q800,220 850,200" 
+                      fill="none" stroke="#3E5C76" strokeWidth="2"/>
+                <path d="M100,250 Q150,230 200,250 T300,250 Q350,270 400,250 T500,250 Q550,230 600,250 T700,250 Q750,270 800,250 T900,250" 
+                      fill="none" stroke="#6C7A89" strokeWidth="2"/>
+                <path d="M120,300 Q170,280 220,300 T320,300 Q370,320 420,300 T520,300 Q570,280 620,300 T720,300 Q770,320 820,300 T920,300" 
+                      fill="none" stroke="#FF6B35" strokeWidth="2"/>
+                {/* Add more map elements */}
+                <circle cx="200" cy="150" r="3" fill="#3E5C76"/>
+                <circle cx="400" cy="180" r="3" fill="#6C7A89"/>
+                <circle cx="600" cy="160" r="3" fill="#FF6B35"/>
+                <circle cx="800" cy="190" r="3" fill="#3E5C76"/>
+                <circle cx="300" cy="280" r="3" fill="#6C7A89"/>
+                <circle cx="500" cy="260" r="3" fill="#FF6B35"/>
+                <circle cx="700" cy="270" r="3" fill="#3E5C76"/>
+                <circle cx="900" cy="250" r="3" fill="#6C7A89"/>
+              </svg>
+            </div>
+
+            {/* Location Cards positioned around the map */}
+            <div className="relative z-10 w-full h-full">
+              {/* Oceania - Bottom Right */}
               <motion.div
-                key={index}
-                className="bg-gradient-to-br from-[#F0F3F4] to-[#E8ECEF] rounded-3xl p-6 shadow-xl border border-[#E8ECEF] group"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.05 }}
-                whileHover={{ y: -5, scale: 1.02 }}
+                className="absolute bottom-8 right-8 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                whileHover={{ scale: 1.05 }}
               >
-                <div className={`w-12 h-12 bg-gradient-to-br ${location.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <span className="text-white font-bold text-sm">🌍</span>
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇦🇺</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">Oceania</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Sydney, Melbourne, Brisbane</p>
                 </div>
-                
-                <h3 className="text-xl font-bold text-[#212121] mb-2 font-poppins group-hover:text-[#3E5C76] transition-colors duration-300">
-                  {location.region}
-                </h3>
-                
-                <p className="text-[#6C7A89] text-sm font-inter">
-                  {location.cities}
-                </p>
               </motion.div>
-            ))}
+
+              {/* US - Top Left */}
+              <motion.div
+                className="absolute top-8 left-8 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇺🇸</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">US</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Los Angeles, New York, Houston</p>
+                </div>
+              </motion.div>
+
+              {/* South America - Bottom Left */}
+              <motion.div
+                className="absolute bottom-8 left-8 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇧🇷</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">South America</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">São Paulo, Buenos Aires, Lima</p>
+                </div>
+              </motion.div>
+
+              {/* Europe - Top Center */}
+              <motion.div
+                className="absolute top-8 left-1/2 transform -translate-x-1/2 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇪🇺</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">EU - MED</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Hamburg, Rotterdam, Antwerp</p>
+                </div>
+              </motion.div>
+
+              {/* Middle East - Top Right */}
+              <motion.div
+                className="absolute top-8 right-8 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇦🇪</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">Middle East</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Dubai, Jeddah, Doha</p>
+                </div>
+              </motion.div>
+
+              {/* India - Center Left */}
+              <motion.div
+                className="absolute top-1/2 left-8 transform -translate-y-1/2 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇮🇳</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">India</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Mumbai, Chennai, Kolkata</p>
+                </div>
+              </motion.div>
+
+              {/* China - Center Right */}
+              <motion.div
+                className="absolute top-1/2 right-8 transform -translate-y-1/2 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇨🇳</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">China</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Shanghai, Shenzhen, Hong Kong</p>
+                </div>
+              </motion.div>
+
+              {/* Southeast Asia - Center */}
+              <motion.div
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇹🇭</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">Southeast Asia</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Bangkok, Singapore, Manila</p>
+                </div>
+              </motion.div>
+
+              {/* Korea - Top Right Center */}
+              <motion.div
+                className="absolute top-1/3 right-1/4 w-48"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">🇰🇷</span>
+                    <h3 className="text-lg font-bold text-[#212121] font-poppins">Korea</h3>
+                  </div>
+                  <p className="text-[#6C7A89] text-sm font-inter">Seoul, Busan, Incheon</p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Connection Lines Animation */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none">
+              <motion.path
+                d="M 200 150 Q 400 200 600 160"
+                stroke="#3E5C76"
+                strokeWidth="2"
+                fill="none"
+                strokeDasharray="5,5"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{ duration: 2, delay: 1 }}
+              />
+              <motion.path
+                d="M 400 180 Q 600 220 800 190"
+                stroke="#6C7A89"
+                strokeWidth="2"
+                fill="none"
+                strokeDasharray="5,5"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{ duration: 2, delay: 1.2 }}
+              />
+              <motion.path
+                d="M 300 280 Q 500 240 700 270"
+                stroke="#FF6B35"
+                strokeWidth="2"
+                fill="none"
+                strokeDasharray="5,5"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{ duration: 2, delay: 1.4 }}
+              />
+            </svg>
           </div>
+
+          {/* Stats Summary */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            <div className="text-center">
+              <div className="text-4xl font-bold text-[#3E5C76] mb-2 font-poppins">11</div>
+              <div className="text-lg text-[#6C7A89] font-inter">Global Regions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-[#3E5C76] mb-2 font-poppins">500+</div>
+              <div className="text-lg text-[#6C7A89] font-inter">Cities Worldwide</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-[#3E5C76] mb-2 font-poppins">24/7</div>
+              <div className="text-lg text-[#6C7A89] font-inter">Global Support</div>
+            </div>
+          </motion.div>
 
           <motion.div
             className="text-center mt-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -903,7 +1255,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Features />
+      {/* <Features /> */}
       <Footer />
     </main>
   )

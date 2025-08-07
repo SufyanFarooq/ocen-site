@@ -28,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} font-sans`}>
+      <body 
+        className={`${inter.variable} ${poppins.variable} font-sans`}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>

@@ -102,28 +102,32 @@ export default function Contact() {
                 opacity: [0, 1, 0],
               }}
               transition={{
-                duration: 6 + (i % 4),
+                duration: 3 + (i % 2),
                 repeat: Infinity,
-                delay: i * 0.2,
+                delay: i * 0.1,
               }}
             />
           ))}
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-white">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl text-ocean-100 max-w-3xl mx-auto">
-              If you want to get more information or a quotation from us, please fill out the inquiry form below.
+            <p className="text-xl md:text-2xl text-ocean-100 max-w-4xl mx-auto">
+              Get in touch with our team to discuss your sourcing needs and discover how we can help your business grow.
             </p>
-          </motion.div>
+          </div>
+        </div>
+
+        {/* Diagonal Edge Cut Overlay - Left Side */}
+        <div 
+          className="absolute top-0 left-0 w-1/2 h-full bg-[#6C7A89] backdrop-blur-sm z-10"
+          style={{
+            clipPath: 'polygon(0% 0%, 100% 0%, 0% 100%)'
+          }}
+        >
         </div>
       </section>
 
@@ -132,26 +136,13 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <motion.div
-              ref={ref}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.8 }}
-            >
+            <div>
               <h2 className="text-3xl font-bold ocean-text-gradient mb-8">
                 Get In Touch
               </h2>
               
               {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="ocean-card p-8 text-center"
-                >
+                <div className="ocean-card p-8 text-center">
                   <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-deep-800 mb-2">
                     Thank You!
@@ -159,15 +150,13 @@ export default function Contact() {
                   <p className="text-deep-600 mb-6">
                     Your message has been sent successfully. We'll get back to you within 24 hours.
                   </p>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <button
                     onClick={() => setIsSubmitted(false)}
                     className="ocean-button"
                   >
                     Send Another Message
-                  </motion.button>
-                </motion.div>
+                  </button>
+                </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -249,11 +238,9 @@ export default function Contact() {
                     />
                   </div>
                   
-                  <motion.button
+                  <button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                     className="ocean-button w-full flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
@@ -267,23 +254,13 @@ export default function Contact() {
                         <span>Send Message</span>
                       </>
                     )}
-                  </motion.button>
+                  </button>
                 </form>
               )}
-            </motion.div>
+            </div>
 
             {/* Contact Information */}
-            <motion.div
-              ref={ref}
-              initial="hidden"
-              animate={inView ? "visible" : "hidden"}
-              variants={{
-                hidden: { opacity: 0, x: 50 },
-                visible: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold ocean-text-gradient mb-8">
                   Contact Information
@@ -295,12 +272,8 @@ export default function Contact() {
 
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                    whileHover={{ y: -5 }}
                     className="ocean-card p-6"
                   >
                     <div className="flex items-start space-x-4">
@@ -319,17 +292,12 @@ export default function Contact() {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               {/* Business Hours */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="ocean-card p-6"
-              >
+              <div className="ocean-card p-6">
                 <h3 className="text-lg font-semibold text-deep-800 mb-4">
                   Business Hours
                 </h3>
@@ -347,8 +315,8 @@ export default function Contact() {
                     <span>Closed</span>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

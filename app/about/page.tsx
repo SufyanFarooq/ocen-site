@@ -90,130 +90,77 @@ export default function About() {
                 opacity: [0, 1, 0],
               }}
               transition={{
-                duration: 8 + (i % 4),
+                duration: 4 + (i % 2),
                 repeat: Infinity,
-                delay: i * 0.3,
+                delay: i * 0.1,
               }}
             />
           ))}
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-white">
-              Bringing China to your doorstep
+              About Ocean Port Link
             </h1>
             <p className="text-xl md:text-2xl text-ocean-100 max-w-4xl mx-auto">
-              Ocean Port Link has a global agent network. We are capable of procuring all kinds of goods and delivering on schedule to all ports across continents.
+              Connecting Australian businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.
             </p>
-          </motion.div>
+          </div>
+        </div>
+
+        {/* Diagonal Edge Cut Overlay - Left Side */}
+        <div 
+          className="absolute top-0 left-0 w-1/2 h-full bg-[#6C7A89] backdrop-blur-sm z-10"
+          style={{
+            clipPath: 'polygon(0% 0%, 100% 0%, 0% 100%)'
+          }}
+        >
         </div>
       </section>
 
       {/* Mission Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2 },
-              },
-            }}
-            className="text-center mb-16"
-          >
-            <motion.h2
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="text-4xl md:text-5xl font-bold ocean-text-gradient mb-6"
-            >
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold ocean-text-gradient mb-6">
               Our Mission
-            </motion.h2>
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="text-xl text-deep-600 max-w-3xl mx-auto mb-12"
-            >
+            </h2>
+            <p className="text-xl text-deep-600 max-w-3xl mx-auto mb-12">
               A sourcing company built for small and medium business. We are connecting the Australian SMB market directly with China to achieve a competitive edge over pricing and the market.
-            </motion.p>
+            </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {missions.map((mission, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={{
-                    hidden: { opacity: 0, y: 30 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
                   className="ocean-card p-6 text-center"
                 >
                   <CheckCircle className="h-12 w-12 text-ocean-600 mx-auto mb-4" />
                   <p className="text-deep-700 font-medium">{mission}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Team Section */}
       <section className="py-20 bg-gradient-to-br from-ocean-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.3 },
-              },
-            }}
-            className="text-center mb-16"
-          >
-            <motion.h2
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="text-4xl md:text-5xl font-bold ocean-text-gradient mb-6"
-            >
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold ocean-text-gradient mb-6">
               Meet Our Team
-            </motion.h2>
-            <motion.p
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="text-xl text-deep-600 max-w-3xl mx-auto"
-            >
+            </h2>
+            <p className="text-xl text-deep-600 max-w-3xl mx-auto">
               Our experienced team is dedicated to providing you with the best sourcing solutions.
-            </motion.p>
-          </motion.div>
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {teamMembers.map((member, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={{
-                  hidden: { opacity: 0, x: index % 2 === 0 ? -50 : 50 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                whileHover={{ y: -10 }}
                 className="ocean-card p-8"
               >
                 <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
@@ -232,7 +179,7 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -241,39 +188,16 @@ export default function About() {
       {/* Values Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: { staggerChildren: 0.2 },
-              },
-            }}
-            className="text-center mb-16"
-          >
-            <motion.h2
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              className="text-4xl md:text-5xl font-bold ocean-text-gradient mb-6"
-            >
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold ocean-text-gradient mb-6">
               Our Values
-            </motion.h2>
-          </motion.div>
+            </h2>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 50 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                whileHover={{ y: -10, scale: 1.02 }}
                 className="ocean-card p-6 text-center"
               >
                 <value.icon className="h-12 w-12 text-ocean-600 mx-auto mb-4" />
@@ -283,7 +207,7 @@ export default function About() {
                 <p className="text-deep-600">
                   {value.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
