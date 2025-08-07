@@ -216,31 +216,7 @@ const Hero = () => {
                   </motion.p>
                 </motion.div>
 
-                {/* CTA Buttons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                  className="flex flex-col sm:flex-row gap-4 relative z-40"
-                >
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-[#FF6B35] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins"
-                  >
-                    <span>Work With Us</span>
-                    <ArrowRight className="h-5 w-5" />
-                  </motion.button>
-                  
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-[#3E5C76] transition-all duration-300 flex items-center justify-center space-x-2 font-poppins"
-                  >
-                    <span>Learn More</span>
-                    {renderIcon(slides[currentSlide].icon, "h-5 w-5")}
-                  </motion.button>
-                </motion.div>
+
               </div>
 
               {/* Visual Element */}
@@ -290,45 +266,49 @@ const Hero = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Slider Navigation */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
-            {/* Previous Button */}
+          {/* Desktop CTA Buttons */}
+          <div className="absolute top-1/2 right-8 transform -translate-y-1/2 hidden lg:flex flex-col gap-4 z-40">
             <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={prevSlide}
-              className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#FF6B35] text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins whitespace-nowrap"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <span>Work With Us</span>
+              <ArrowRight className="h-4 w-4" />
             </motion.button>
-
-            {/* Slide Indicators */}
-            <div className="flex space-x-2">
-              {slides.map((_, index) => (
-                <motion.button
-                  key={index}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.8 }}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-[#FF6B35] scale-125' 
-                      : 'bg-white/50 hover:bg-white/70'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Next Button */}
+            
             <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={nextSlide}
-              className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-white hover:text-[#3E5C76] transition-all duration-300 flex items-center justify-center space-x-2 font-poppins whitespace-nowrap"
             >
-              <ChevronRight className="h-6 w-6" />
+              <span>Learn More</span>
+              <Ship className="h-4 w-4" />
             </motion.button>
           </div>
+
+          {/* Mobile CTA Buttons */}
+          <div className="absolute bottom-31 left-1/2 transform -translate-x-1/2 flex lg:hidden flex-col sm:flex-row gap-4 z-40 w-full max-w-md px-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#FF6B35] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins w-full"
+            >
+              <span>Work With Us</span>
+              <ArrowRight className="h-5 w-5" />
+            </motion.button>
+            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-[#3E5C76] transition-all duration-300 flex items-center justify-center space-x-2 font-poppins w-full"
+            >
+              <span>Learn More</span>
+              <Ship className="h-5 w-5" />
+            </motion.button>
+          </div>
+
+        
         </div>
       </div>
 
