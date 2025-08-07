@@ -16,6 +16,7 @@ const Hero = () => {
       description: "Your Trusted Sourcing Agents In Australia Helping You In Sourcing Products From China At The Best Possible Rate.",
       image: "/hero/hero-1.png",
       icon: Ship,
+      gradient: "from-[#3E5C76] via-[#6C7A89] to-[#8B9CA8]",
     },
     {
       title: "Gain a competitive edge",
@@ -23,6 +24,7 @@ const Hero = () => {
       description: "We have local representatives in the Chinese market that help you unlock the product sources not easily available to foreign buyers.",
       image: "/hero/hero-2.png",
       icon: Globe,
+      gradient: "from-[#2C4A6B] via-[#5A7A8A] to-[#7B9CA8]",
     },
     {
       title: "1000+ Manufacturers",
@@ -30,6 +32,7 @@ const Hero = () => {
       description: "Connect with our extensive network of verified manufacturers and suppliers across the globe for your sourcing needs.",
       image: "/hero/hero-3.png",
       icon: TrendingUp,
+      gradient: "from-[#1E3A5A] via-[#4A6A7A] to-[#6B8C98]",
     },
   ]
 
@@ -59,18 +62,11 @@ const Hero = () => {
     return () => clearInterval(timer)
   }, [slides.length])
 
-  // Preload first image
+  // Reset image states when slide changes
   useEffect(() => {
-    const link = document.createElement('link')
-    link.rel = 'preload'
-    link.as = 'image'
-    link.href = slides[0].image
-    document.head.appendChild(link)
-    
-    return () => {
-      document.head.removeChild(link)
-    }
-  }, [])
+    setImageLoading(true)
+    setImageError(false)
+  }, [currentSlide])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -107,7 +103,7 @@ const Hero = () => {
             className="absolute inset-0"
           >
             {/* Fallback gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#3E5C76] via-[#6C7A89] to-[#8B9CA8]"></div>
+            <div className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].gradient}`}></div>
             
             {/* Loading spinner */}
             {imageLoading && (
@@ -126,7 +122,7 @@ const Hero = () => {
                 setImageLoading(false)
               }}
               style={{
-                opacity: imageLoading ? 0 : 1
+                opacity: imageLoading || imageError ? 0 : 1
               }}
             />
             
