@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Image from 'next/image'
 import { ArrowRight, Ship, Globe, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Hero = () => {
@@ -60,6 +59,19 @@ const Hero = () => {
     return () => clearInterval(timer)
   }, [slides.length])
 
+  // Preload first image
+  useEffect(() => {
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = slides[0].image
+    document.head.appendChild(link)
+    
+    return () => {
+      document.head.removeChild(link)
+    }
+  }, [])
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
@@ -97,23 +109,25 @@ const Hero = () => {
             {/* Fallback gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#3E5C76] via-[#6C7A89] to-[#8B9CA8]"></div>
             
-            <Image
+            {/* Loading spinner */}
+            {imageLoading && (
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+              </div>
+            )}
+            
+            <img
               src={slides[currentSlide].image}
               alt={slides[currentSlide].title}
-              fill
-              priority={currentSlide === 0}
-              quality={85}
-              sizes="100vw"
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'center',
-              }}
+              className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000"
               onLoad={() => setImageLoading(false)}
               onError={() => {
                 setImageError(true)
                 setImageLoading(false)
               }}
-              className={`transition-opacity duration-1000 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+              style={{
+                opacity: imageLoading ? 0 : 1
+              }}
             />
             
             {/* Gradient overlay for better text readability */}
