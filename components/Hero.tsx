@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { ArrowRight, Ship, Globe, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Hero = () => {
@@ -112,17 +113,23 @@ const Hero = () => {
               </div>
             )}
             
-            <img
+            <Image
               src={slides[currentSlide].image}
               alt={slides[currentSlide].title}
-              className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000"
+              fill
+              priority={currentSlide === 0}
+              quality={85}
+              sizes="100vw"
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center',
+                opacity: imageLoading || imageError ? 0 : 1,
+                transition: 'opacity 1s ease-in-out'
+              }}
               onLoad={() => setImageLoading(false)}
               onError={() => {
                 setImageError(true)
                 setImageLoading(false)
-              }}
-              style={{
-                opacity: imageLoading || imageError ? 0 : 1
               }}
             />
             
