@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, MapPin, Phone, Ship, Globe, TrendingUp } from 'lucide-react'
 
 const Footer = () => {
@@ -80,8 +81,13 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center space-x-2 mb-6">
-              <Ship className="h-8 w-8 text-[#FF6B35]" />
-              <span className="text-2xl font-bold">Ocean Port Link</span>
+              <Image 
+                src="/black-logo.png" 
+                alt="Ocean Port Link Logo" 
+                width={120} 
+                height={120}
+                className="h-40 w-40 object-contain"
+              />
             </div>
             <p className="text-[#E8ECEF] mb-6 leading-relaxed">
               Your trusted sourcing partner connecting Australian businesses with premium Chinese manufacturers.
