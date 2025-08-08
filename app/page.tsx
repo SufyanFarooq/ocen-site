@@ -517,39 +517,54 @@ export default function Home() {
               {
                 icon: '💰',
                 title: 'No Flat Fee',
-                description: 'If your total order cost is more than $2500, we don\'t charge any flat fees.'
+                description: 'If your total order cost is more than $2500, we don\'t charge any flat fees.',
+                image: '/choose-us/no-flat-fee.jpg'
               },
               {
                 icon: '📦',
                 title: 'No MOQ',
-                description: 'No minimum order limit, we want you to have a frictionless experience and try with a small order before scaling.'
+                description: 'No minimum order limit, we want you to have a frictionless experience and try with a small order before scaling.',
+                image: '/choose-us/no-moq.jpg'
               },
               {
                 icon: '🇦🇺',
                 title: 'Australian Company',
-                description: 'Payment methods, Communication, and accountability are the same as with any local company in Australia.'
+                description: 'Payment methods, Communication, and accountability are the same as with any local company in Australia.',
+                image: '/choose-us/australian-company.jpg'
               },
               {
                 icon: '📋',
                 title: 'Free Quote',
-                description: 'No upfront fee means that you will be given a free of cost estimate for the product you inquire for.'
+                description: 'No upfront fee means that you will be given a free of cost estimate for the product you inquire for.',
+                image: '/choose-us/free-quote.jpg'
               },
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-3xl p-8 shadow-xl border border-[#E8ECEF] text-center group"
+                className="bg-white rounded-3xl p-8 shadow-xl border border-[#E8ECEF] text-center group relative overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#3E5C76] to-[#4A6B8A] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-2xl">{feature.icon}</span>
+                {/* Background Image */}
+                <div className="absolute inset-0 rounded-3xl overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-full object-cover opacity-50 group-hover:opacity-60 transition-opacity duration-500"
+                  />
+                  {/* Overlay for better text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/50 to-white/30"></div>
                 </div>
-                <h3 className="text-xl font-bold text-[#212121] mb-4 font-poppins group-hover:text-[#3E5C76] transition-colors duration-300">
+                
+                <div className="w-20 h-20 bg-gradient-to-br from-[#3E5C76] to-[#4A6B8A] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl relative z-10 border-4 border-white ring-4 ring-[#3E5C76]/20">
+                  <span className="text-3xl">{feature.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#212121] mb-4 font-poppins group-hover:text-[#3E5C76] transition-colors duration-300 relative z-10">
                   {feature.title}
                 </h3>
-                <p className="text-[#6C7A89] leading-relaxed font-inter">
+                <p className="text-[#6C7A89] leading-relaxed font-inter relative z-10">
                   {feature.description}
                 </p>
               </motion.div>

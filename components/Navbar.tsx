@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Ship, Globe } from 'lucide-react'
 
@@ -41,16 +42,14 @@ const Navbar = () => {
             className="flex items-center space-x-2"
           >
             <div className="relative">
-              <Ship className="h-8 w-8 text-[#3E5C76]" />
-              <motion.div
-                className="absolute -top-1 -right-1 h-3 w-3 bg-[#FF6B35] rounded-full"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
+              <Image 
+                src="/black-logo.png" 
+                alt="Ocean Port Link Logo" 
+                width={120} 
+                height={120}
+                className="h-40 w-40 object-contain"
               />
             </div>
-            <span className="text-xl font-bold text-[#3E5C76]">
-              Ocean Port Link
-            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
