@@ -100,8 +100,8 @@ export default function About() {
         
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
-            <h1 className="text-5xl md:text-6xl font-bold text-white">
-              About Ocean Port Link
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
+              About YST - YIWU SALAH Traders
             </h1>
             <p className="text-xl md:text-2xl text-ocean-100 max-w-4xl mx-auto">
               Connecting Australian businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.

@@ -16,9 +16,39 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Ocean Port Link - Your Trusted Sourcing Partner',
-  description: 'Source products from China through an Australian partner. Your trusted sourcing agents helping you source products at the best possible rates.',
-  keywords: 'sourcing, China, Australia, import, export, manufacturing, suppliers',
+  title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
+  description: 'YST - YIWU SALAH Traders. Source products from China through an Australian partner. Your trusted sourcing agents helping you source products at the best possible rates.',
+  keywords: 'YST, YIWU SALAH Traders, sourcing, China, Australia, import, export, manufacturing, suppliers',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/black-logo.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
+    description: 'YST - YIWU SALAH Traders. Source products from China through an Australian partner. Your trusted sourcing agents helping you source products at the best possible rates.',
+    url: 'https://your-domain.com',
+    siteName: 'YST - YIWU SALAH Traders',
+    images: [
+      {
+        url: '/black-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'YST - YIWU SALAH Traders Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
+    description: 'YST - YIWU SALAH Traders. Source products from China through an Australian partner. Your trusted sourcing agents helping you source products at the best possible rates.',
+    images: ['/black-logo.png'],
+  },
 }
 
 export default function RootLayout({

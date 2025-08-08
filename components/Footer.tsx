@@ -83,7 +83,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-6">
               <Image 
                 src="/black-logo.png" 
-                alt="Ocean Port Link Logo" 
+                alt="YST - YIWU SALAH Traders Logo" 
                 width={120} 
                 height={120}
                 className="h-40 w-40 object-contain"
@@ -205,8 +205,8 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 pt-8 border-t border-[#E8ECEF] flex flex-col md:flex-row justify-between items-center"
         >
-          <div className="text-[#E8ECEF] text-sm">
-            © 2024-2025 Ocean Port Link. All rights reserved.
+          <div className="text-center text-[#E8ECEF] text-sm">
+            © 2024-2025 YST - YIWU SALAH Traders. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-[#E8ECEF] hover:text-[#FF6B35] text-sm">

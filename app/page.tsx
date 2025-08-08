@@ -165,7 +165,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Why Choose <span className="text-[#3E5C76]">Ocean Port Link</span>?
+              Why Choose <span className="text-[#3E5C76]">YST - YIWU SALAH Traders</span>?
             </motion.h2>
             <motion.p 
               className="text-xl text-[#6C7A89] max-w-3xl mx-auto font-inter"
