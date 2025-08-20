@@ -21,6 +21,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/services' },
     { name: 'Why Choose Us', href: '/why-choose-us' },
     // { name: 'Market Insights', href: '/insights' },
     { name: 'Contact', href: '/contact' },
