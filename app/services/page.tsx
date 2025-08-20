@@ -196,6 +196,37 @@ export default function ServicesPage() {
           </motion.button>
         </div>
       </section>
+
+      {/* Logistics Services Link */}
+      <section className="py-20 bg-gradient-to-br from-[#F0F3F4] to-[#E8ECEF]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-bold text-[#212121] mb-6"
+          >
+            Need Shipping & Logistics?
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-[#6C7A89] mb-8"
+          >
+            Discover our comprehensive FCL & LCL freight shipping services and professional logistics solutions.
+          </motion.p>
+          <motion.a
+            href="/logistics"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="inline-block bg-[#3E5C76] hover:bg-[#2A4A5F] text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:shadow-xl"
+          >
+            View Logistics Services
+          </motion.a>
+        </div>
+      </section>
     </div>
     <Footer />
     </main>

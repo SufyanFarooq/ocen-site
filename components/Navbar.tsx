@@ -22,9 +22,9 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'Logistics', href: '/logistics' },
     { name: 'Why Choose Us', href: '/why-choose-us' },
     { name: 'FAQs', href: '/faqs' },
-    // { name: 'Market Insights', href: '/insights' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -70,7 +70,7 @@ const Navbar = () => {
                 >
                   {item.name}
                   <motion.div
-                    className="absolute -bottom-1 left-0 h-0.5 bg-[#FF6B35] rounded-full"
+                    className="absolute -bottom-1 left-0 h-0.5 bg-[var(--primary-navy)] rounded-full"
                     initial={{ width: 0 }}
                     whileHover={{ width: '100%' }}
                     transition={{ duration: 0.2 }}
@@ -85,7 +85,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#FF6B35] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-[#FF6B35] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#1e40af] transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Request a Quote
             </motion.button>
@@ -134,7 +134,7 @@ const Navbar = () => {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="ocean-button w-full"
+                className="bg-[#FF6B35] hover:bg-[#1e40af] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 w-full"
               >
                 Request a Quote
               </motion.button>
