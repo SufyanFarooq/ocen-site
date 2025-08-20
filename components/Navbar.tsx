@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Why Choose Us', href: '/why-choose-us' },
+    { name: 'FAQs', href: '/faqs' },
     // { name: 'Market Insights', href: '/insights' },
     { name: 'Contact', href: '/contact' },
   ]
@@ -42,15 +43,17 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="relative">
-              <Image 
-                src="/black-logo.png" 
-                alt="YST - YIWU SALAH Traders Logo" 
-                width={120} 
-                height={120}
-                className="h-40 w-40 object-contain"
-              />
-            </div>
+            <Link href="/">
+              <div className="relative">
+                <Image 
+                  src="/black-logo.png" 
+                  alt="YST - YIWU SALAH Traders Logo" 
+                  width={120} 
+                  height={120}
+                  className="h-40 w-40 object-contain"
+                />
+              </div>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
