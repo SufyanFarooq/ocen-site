@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import {  Star } from "lucide-react";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -181,21 +181,6 @@ export default function Testimonials() {
             </div>
           </motion.div>
 
-          {/* Navigation Arrows */}
-          {/* <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-4 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-[#F9FAFB] group border border-[#F3F4F6]"
-          >
-            <ChevronLeft className="w-5 h-5 text-[#6B7280] group-hover:text-[#3E5C76] transition-colors duration-300" />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-4 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 hover:bg-[#F9FAFB] group border border-[#F3F4F6]"
-          >
-            <ChevronRight className="w-5 h-5 text-[#6B7280] group-hover:text-[#3E5C76] transition-colors duration-300" />
-          </button> */}
-
           {/* Bottom Dots Indicator */}
           <div className="flex justify-center mt-12 space-x-3">
             {testimonials.map((_, index) => (
@@ -211,29 +196,6 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
-
-        {/* Trust Indicators */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 text-center"
-        >
-          <p className="text-[#6B7280] text-sm mb-6 font-medium">
-            Trusted by businesses across Australia
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="text-[#3E5C76] font-bold text-xl">500+</div>
-            <div className="text-[#D1D5DB] text-xl">•</div>
-            <div className="text-[#3E5C76] font-bold text-xl">
-              98% Satisfaction
-            </div>
-            <div className="text-[#D1D5DB] text-xl">•</div>
-            <div className="text-[#3E5C76] font-bold text-xl">
-              5-Star Rating
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
