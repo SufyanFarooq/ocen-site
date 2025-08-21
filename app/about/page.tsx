@@ -75,7 +75,7 @@ export default function About() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 ocean-bg overflow-hidden">
+      <section className="relative pt-20 pb-16 bg-[#3E5C76] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           {floatingPositions.map((position, i) => (
             <motion.div
@@ -98,12 +98,12 @@ export default function About() {
           ))}
         </div>
         
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
               About YST - YIWU SALAH Traders
             </h1>
-            <p className="text-xl md:text-2xl text-ocean-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-medium">
               Connecting Australian businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.
             </p>
           </div>

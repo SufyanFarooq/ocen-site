@@ -44,15 +44,16 @@ export default function FreightShippingPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-[#3E5C76]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <section className="relative pt-32 pb-20 bg-[#3E5C76] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-30">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
-            FCL & LCL <span className="text-[#1e3a8a]">Freight Shipping</span>
+            FCL & LCL <span className="text-[var(--primary)]">Freight Shipping</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -63,6 +64,15 @@ export default function FreightShippingPage() {
             Reliable and cost-efficient international shipping solutions from Yiwu to destinations worldwide. 
             Whether you need FCL or LCL services, we ensure your goods are handled with care and delivered on time.
           </motion.p>
+        </div>
+
+        {/* Diagonal Edge Cut Overlay - Left Side */}
+        <div 
+          className="absolute top-0 left-0 w-1/2 h-full bg-[#6C7A89] backdrop-blur-sm z-10"
+          style={{
+            clipPath: 'polygon(0% 0%, 100% 0%, 0% 100%)'
+          }}
+        >
         </div>
       </section>
 
@@ -95,7 +105,7 @@ export default function FreightShippingPage() {
               </div>
               
               <div className="text-center p-6 bg-[#F8F9FA] rounded-2xl">
-                <div className="w-16 h-16 bg-[#FF6B35] rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-[#212121] mb-3">Faster Transit Times</h3>
@@ -137,7 +147,7 @@ export default function FreightShippingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center p-6 bg-[#F8F9FA] rounded-2xl">
-                <div className="w-16 h-16 bg-[#FF6B35] rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-[#212121] mb-3">Cost Savings</h3>
@@ -153,7 +163,7 @@ export default function FreightShippingPage() {
               </div>
               
               <div className="text-center p-6 bg-[#F8F9FA] rounded-2xl">
-                <div className="w-16 h-16 bg-[#FF6B35] rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-[#212121] mb-3">Professional Handling</h3>
@@ -212,7 +222,7 @@ export default function FreightShippingPage() {
             className="bg-gradient-to-br from-[#3E5C76] to-[#2A4A5F] rounded-3xl shadow-2xl p-8 md:p-12 text-center text-white"
           >
             <h2 className="text-4xl font-bold mb-6">
-              Trusted Freight Provider in <span className="text-[#1e3a8a]">Yiwu</span>
+              Trusted Freight Provider in <span className="text-[var(--primary)]">Yiwu</span>
             </h2>
             <p className="text-xl text-white/90 max-w-4xl mx-auto mb-8">
               As a leading freight provider in Yiwu, we manage the entire logistics process—from booking space with carriers 

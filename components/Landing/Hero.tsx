@@ -182,7 +182,7 @@ const Hero = () => {
                   className="space-y-6"
                 >
                   <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-4">
-                    <span className="w-2 h-2 bg-[#FF6B35] rounded-full mr-2"></span>
+                    <span className="w-2 h-2 bg-[#0B1D3A] rounded-full mr-2"></span>
                     Trusted Sourcing Partner
                   </div>
                   
@@ -271,10 +271,10 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#FF6B35] text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins whitespace-nowrap"
+              className="bg-[#0B1D3A] text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins"
             >
-              <span>Work With Us</span>
-              <ArrowRight className="h-4 w-4" />
+              <Ship className="w-5 h-5" />
+              Start Sourcing
             </motion.button>
             
             <motion.button
@@ -292,10 +292,10 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#FF6B35] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins w-full"
+              className="bg-[#0B1D3A] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins w-full"
             >
-              <span>Work With Us</span>
-              <ArrowRight className="h-5 w-5" />
+              <Ship className="w-5 h-5" />
+              Start Sourcing
             </motion.button>
             
             <motion.button

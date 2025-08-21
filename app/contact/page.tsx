@@ -87,7 +87,7 @@ export default function Contact() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 ocean-bg overflow-hidden">
+      <section className="relative pt-20 pb-16 bg-[#3E5C76] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           {floatingPositions.map((position, i) => (
             <motion.div
@@ -115,7 +115,7 @@ export default function Contact() {
             <h1 className="text-5xl md:text-6xl font-bold text-white">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl text-ocean-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto">
               Get in touch with our team to discuss your sourcing needs and discover how we can help your business grow.
             </p>
           </div>

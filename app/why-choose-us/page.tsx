@@ -67,33 +67,20 @@ export default function WhyChoseUSPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative">
-        <div className="absolute inset-0 -z-10">
-          {/* Unsplash placeholder hero image */}
-          <img
-            src="https://images.unsplash.com/photo-1559177867-91fd1f2b62a9?q=80&w=2000&auto=format&fit=crop"
-            alt=""
-            className="w-full h-full object-cover opacity-80"
-          />
-          {/* gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#3E5C76]/80 via-[#6C7A89]/60 to-[#8B9CA8]/50" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 pt-28 pb-24">
+      <section className="relative pt-20 pb-16 bg-[#3E5C76] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-30">
           <motion.h1
-            className="text-white text-4xl md:text-6xl font-bold leading-tight text-balance drop-shadow-lg font-poppins"
+            className="text-5xl md:text-6xl font-bold text-white mb-6 font-poppins"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[#3E5C76]">Source smarter. Ship faster.</span> <br className="hidden md:block" />
-            <span className="text-[#3E5C76]">Grow confidently with</span>{' '}
-            <span className="text-[#FF6B35] font-extrabold">YST — YIWU SALAH Traders</span>
-            <span className="text-[#3E5C76]">.</span>
+            Source smarter. Ship faster. <br className="hidden md:block" />
+            Grow confidently with <span className="text-[var(--primary)]">YST — YIWU SALAH Traders</span>.
           </motion.h1>
 
           <motion.p
-            className="text-slate-500 max-w-2xl mt-5 text-lg font-inter leading-relaxed"
+            className="text-xl text-white/90 max-w-4xl mx-auto font-medium"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -102,42 +89,27 @@ export default function WhyChoseUSPage() {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex gap-4"
+            className="mt-8 flex gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <button className="px-6 py-3 rounded-xl bg-[#FF6B35] text-white font-semibold shadow hover:shadow-lg transition hover:bg-[#E55A2B] font-poppins">
+            <button className="px-6 py-3 rounded-xl bg-[var(--primary)] text-white font-semibold shadow hover:shadow-lg transition hover:bg-[var(--primary-hover)] font-poppins">
               Work With Us
             </button>
             <a href="#process" className="px-6 py-3 rounded-xl bg-white/10 text-white font-semibold border border-white/30 backdrop-blur-sm hover:bg-white/15 transition font-poppins">
               See How We Work
             </a>
           </motion.div>
+        </div>
 
-          {/* Glassy Stats bar */}
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {stats.map((s) => (
-              <div
-                key={s.title}
-                className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md p-6 text-white shadow-lg"
-              >
-                <div className="text-3xl">{s.icon}</div>
-                <div className="mt-3 text-4xl font-extrabold tracking-tight text-slate-800">
-                  <Counter end={s.number} />
-                  {s.suffix}
-                </div>
-                <div className="text-sm mt-1 text-slate-600">{s.title}</div>
-                <div className="text-xs text-slate-500 ">{s.description}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* scroll hint */}
-          <div className="mt-10 flex items-center gap-2 text-slate-300">
-            <span className="inline-block w-2 h-2 rounded-full bg-slate-300 animate-bounce" />
-            <span>Scroll to explore</span>
-          </div>
+        {/* Diagonal Edge Cut Overlay - Left Side */}
+        <div 
+          className="absolute top-0 left-0 w-1/2 h-full bg-[#6C7A89] backdrop-blur-sm z-10"
+          style={{
+            clipPath: 'polygon(0% 0%, 100% 0%, 0% 100%)'
+          }}
+        >
         </div>
       </section>
 
@@ -339,7 +311,7 @@ export default function WhyChoseUSPage() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-            <button className="px-7 py-3 rounded-xl bg-[#FF6B35] text-white font-semibold shadow hover:shadow-lg transition hover:bg-[#E55A2B] font-poppins">
+            <button className="px-7 py-3 rounded-xl bg-[var(--primary)] text-white font-semibold shadow hover:shadow-lg transition hover:bg-[var(--primary-hover)] font-poppins">
               Get Free Quote
             </button>
           </motion.div>

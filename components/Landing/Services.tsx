@@ -77,7 +77,7 @@ export default function Services() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
               
               <div className="relative p-8 h-64 flex flex-col justify-end">
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FF6B35] transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[var(--primary)] transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-white/90 leading-relaxed mb-4">
@@ -86,9 +86,9 @@ export default function Services() {
                 
                 {/* Learn More Button - Always visible on mobile */}
                 <div className="flex items-center gap-2 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform md:translate-y-2 md:group-hover:translate-y-0">
-                  <span className="text-[#FF6B35] font-semibold text-sm">Learn More</span>
+                  <span className="text-[var(--primary)] font-semibold text-sm">Learn More</span>
                   <svg 
-                    className="w-4 h-4 text-[#FF6B35] transform group-hover:translate-x-1 transition-transform duration-300" 
+                    className="w-4 h-4 text-[var(--primary)] transform group-hover:translate-x-1 transition-transform duration-300" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -99,7 +99,7 @@ export default function Services() {
               </div>
               
               {/* Hover overlay effect - Only on desktop */}
-              <div className="absolute inset-0 bg-[#FF6B35]/10 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-[var(--primary)]/10 opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           ))}
         </div>

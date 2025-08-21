@@ -85,7 +85,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#FF6B35] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#1e40af] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-[#0B1D3A] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Request a Quote
             </motion.button>
@@ -134,7 +134,7 @@ const Navbar = () => {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#FF6B35] hover:bg-[#1e40af] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 w-full"
+                className="bg-[#0B1D3A] hover:bg-[#23344E] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 w-full"
               >
                 Request a Quote
               </motion.button>

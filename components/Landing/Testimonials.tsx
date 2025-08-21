@@ -23,7 +23,7 @@ export default function Testimonials() {
       role: "Operations Manager",
       content:
         "The team at YST is incredibly professional. From supplier verification to final delivery, they handled everything seamlessly. Our production timeline improved by 30%.",
-      rating: 5,
+      rating: 4,
       image: "/testimonials/Michael-Chen.jpg"
     },
     {
@@ -50,7 +50,7 @@ export default function Testimonials() {
       role: "Creative Director",
       content:
         "YST helped us navigate the complex world of international sourcing. Their airport pickup service and local support made our business trips to China incredibly smooth.",
-      rating: 5,
+      rating: 4,
       image: "/testimonials/Lisa-Wang.jpg"
     },
   ];
@@ -86,7 +86,7 @@ export default function Testimonials() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-block bg-[#E8F5E8] text-[#2E7D32] text-xs font-semibold tracking-[0.2em] uppercase px-4 py-2 rounded-full mb-6"
+            className="inline-block bg-[var(--primary)] text-white text-xs font-semibold tracking-[0.2em] uppercase px-4 py-2 rounded-full mb-6"
           >
             Testimonials
           </motion.div>
@@ -98,7 +98,7 @@ export default function Testimonials() {
           >
             Trusted by <span className="text-[#3E5C76]">Founders</span>
             <br />
-            Backed by <span className="text-[#FF6B35]">Results</span>
+            Backed by <span className="text-[var(--primary)]">Results</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -157,10 +157,14 @@ export default function Testimonials() {
 
             {/* Rating Stars */}
             <div className="flex justify-center mb-6">
-              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+              {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-5 h-5 text-[#FF6B35] fill-current mx-1"
+                  className={`w-5 h-5 mx-1 ${
+                    i < testimonials[currentIndex].rating 
+                      ? "text-[var(--primary)] fill-current" 
+                      : "text-gray-300"
+                  }`}
                 />
               ))}
             </div>

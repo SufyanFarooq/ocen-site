@@ -53,7 +53,7 @@ const Footer = () => {
         {floatingPositions.map((position, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-[#FF6B35] rounded-full"
+            className="absolute w-1 h-1 bg-[var(--primary)] rounded-full"
             style={{
               left: position.left,
               top: position.top,
@@ -94,15 +94,15 @@ const Footer = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                <Mail className="h-5 w-5 text-[#FF6B35]" />
+                <Mail className="h-5 w-5 text-[var(--primary)]" />
                 <span>info@oceanportlink.com</span>
               </div>
               <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                <MapPin className="h-5 w-5 text-[#FF6B35]" />
+                <MapPin className="h-5 w-5 text-[var(--primary)]" />
                 <span>1649 Ocean Drive Road, Lake Cathie NSW 2445</span>
               </div>
               <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                <Phone className="h-5 w-5 text-[#FF6B35]" />
+                <Phone className="h-5 w-5 text-[var(--primary)]" />
                 <span>+61 (0) 400 000 000</span>
               </div>
             </div>
@@ -114,13 +114,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-lg font-semibold mb-6 text-[#FF6B35]">Company</h3>
+            <h3 className="text-lg font-semibold mb-6 text-[var(--primary)]">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-[#E8ECEF] hover:text-[#FF6B35] transition-colors duration-200"
+                    className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -135,13 +135,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-lg font-semibold mb-6 text-[#FF6B35]">Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-[var(--primary)]">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-[#E8ECEF] hover:text-[#FF6B35] transition-colors duration-200"
+                    className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -156,13 +156,13 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-lg font-semibold mb-6 text-[#FF6B35]">Resources</h3>
+            <h3 className="text-lg font-semibold mb-6 text-[var(--primary)]">Resources</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-[#E8ECEF] hover:text-[#FF6B35] transition-colors duration-200"
+                    className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -179,7 +179,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 pt-8 border-t border-[#E8ECEF]"
         >
-          <h3 className="text-xl font-semibold mb-6 text-[#FF6B35] text-center">
+          <h3 className="text-xl font-semibold mb-6 text-[var(--primary)] text-center">
             Global Solutions
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-sm">
@@ -209,13 +209,13 @@ const Footer = () => {
             © 2024-2025 YST - YIWU SALAH Traders. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-[#E8ECEF] hover:text-[#FF6B35] text-sm">
+            <Link href="/privacy" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-[#E8ECEF] hover:text-[#FF6B35] text-sm">
+            <Link href="/terms" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
               Terms of Service
             </Link>
-            <Link href="/contact" className="text-[#E8ECEF] hover:text-[#FF6B35] text-sm">
+            <Link href="/contact" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
               Contact Us
             </Link>
           </div>

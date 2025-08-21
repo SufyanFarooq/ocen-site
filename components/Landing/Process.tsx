@@ -38,9 +38,6 @@ function StepDesktop({
         >
           <Icon className="w-7 h-7 text-[#3E5C76]" />
         </div>
-        <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-[#FF6B35] text-white text-[10px] font-semibold flex items-center justify-center shadow-lg border-2 border-white">
-          {id}
-        </div>
       </div>
       <div className="text-xs font-semibold text-[#212121] text-center max-w-24 leading-tight">
         {title}
@@ -151,11 +148,6 @@ function StepIconMobile({
 
   return (
     <div className="relative flex flex-col items-center justify-center">
-      {/* number badge */}
-      <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-[#FF6B35] text-white text-[9px] font-semibold grid place-items-center shadow border border-white">
-        {id}
-      </div>
-
       {/* icon + label (compact) */}
       <Icon className="w-5 h-5 text-[#3E5C76]" />
       <div className="mt-1 text-[10px] font-semibold text-[#212121] text-center leading-tight">

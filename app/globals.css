@@ -4,11 +4,11 @@
 
 /* Color Scheme Variables */
 :root {
-  --color-primary: #3E5C76;      /* Steel Blue */
-  --color-secondary: #6C7A89;    /* Slate Gray */
-  --color-accent: #FF6B35;       /* Industrial Orange */
   --color-background: #F0F3F4;   /* Cloud White */
   --color-text: #212121;         /* Blackened Gray */
+  --primary: #0B1D3A;
+  --primary-hover: #23344E;
+  --primary-active: #0A1A34;
 }
 
 @layer base {

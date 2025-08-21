@@ -97,15 +97,15 @@ export default function ServicesPage() {
     <Navbar />
     <div className="min-h-screen bg-gradient-to-br from-[#F0F3F4] to-[#E8ECEF]">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-[#3E5C76]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-20 bg-[#3E5C76] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-30">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
-            Our <span className="text-[#FF6B35]">Services</span>
+            Our <span className="text-[var(--primary)]">Services</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -115,6 +115,15 @@ export default function ServicesPage() {
           >
             Comprehensive sourcing solutions tailored to your business needs. From market guidance to final delivery, we handle every step of your sourcing journey.
           </motion.p>
+        </div>
+
+        {/* Diagonal Edge Cut Overlay - Left Side */}
+        <div 
+          className="absolute top-0 left-0 w-1/2 h-full bg-[#6C7A89] backdrop-blur-sm z-10"
+          style={{
+            clipPath: 'polygon(0% 0%, 100% 0%, 0% 100%)'
+          }}
+        >
         </div>
       </section>
 
@@ -153,7 +162,7 @@ export default function ServicesPage() {
                   <ul className="space-y-3">
                     {service.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-[#FF6B35] rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-[#0B1D3A] rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-[#6C7A89] leading-relaxed">
                           {detail}
                         </span>

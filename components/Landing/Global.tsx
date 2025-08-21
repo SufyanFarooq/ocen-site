@@ -40,16 +40,16 @@ export default function Global() {
             <path
               d="M120,300 Q170,280 220,300 T320,300 Q370,320 420,300 T520,300 Q570,280 620,300 T720,300 Q770,320 820,300 T920,300"
               fill="none"
-              stroke="#FF6B35"
+              stroke="var(--primary)"
               strokeWidth="2"
             />
             {/* Add more map elements */}
             <circle cx="200" cy="150" r="3" fill="#3E5C76" />
             <circle cx="400" cy="180" r="3" fill="#6C7A89" />
-            <circle cx="600" cy="160" r="3" fill="#FF6B35" />
+            <circle cx="600" cy="160" r="3" fill="var(--primary)" />
             <circle cx="800" cy="190" r="3" fill="#3E5C76" />
             <circle cx="300" cy="280" r="3" fill="#6C7A89" />
-            <circle cx="500" cy="260" r="3" fill="#FF6B35" />
+            <circle cx="500" cy="260" r="3" fill="var(--primary)" />
             <circle cx="700" cy="270" r="3" fill="#3E5C76" />
             <circle cx="900" cy="250" r="3" fill="#6C7A89" />
           </svg>
@@ -65,16 +65,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.1 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇦🇺</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  Oceania
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/destinations.jpg')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇦🇺</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    Oceania
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Sydney, Melbourne, Brisbane
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Sydney, Melbourne, Brisbane
-              </p>
             </div>
           </motion.div>
 
@@ -86,16 +93,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.2 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇺🇸</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  US
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/hero-1.png')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇺🇸</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    US
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Los Angeles, New York, Houston
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Los Angeles, New York, Houston
-              </p>
             </div>
           </motion.div>
 
@@ -107,16 +121,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.3 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇧🇷</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  South America
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/hero-2.png')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇧🇷</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    South America
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  São Paulo, Buenos Aires, Lima
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                São Paulo, Buenos Aires, Lima
-              </p>
             </div>
           </motion.div>
 
@@ -128,16 +149,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.4 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇪🇺</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  EU - MED
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/hero-3.png')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇪🇺</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    EU - MED
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Hamburg, Rotterdam, Antwerp
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Hamburg, Rotterdam, Antwerp
-              </p>
             </div>
           </motion.div>
 
@@ -149,16 +177,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.5 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇦🇪</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  Middle East
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/manufacturers.jpg')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇦🇪</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    Middle East
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Dubai, Jeddah, Doha
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Dubai, Jeddah, Doha
-              </p>
             </div>
           </motion.div>
 
@@ -170,16 +205,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇮🇳</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  India
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/support.jpg')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇮🇳</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    India
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Mumbai, Chennai, Kolkata
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Mumbai, Chennai, Kolkata
-              </p>
             </div>
           </motion.div>
 
@@ -191,16 +233,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.7 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇨🇳</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  China
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/destinations.jpg')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇨🇳</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    China
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Shanghai, Shenzhen, Hong Kong
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Shanghai, Shenzhen, Hong Kong
-              </p>
             </div>
           </motion.div>
 
@@ -212,16 +261,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇹🇭</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  Southeast Asia
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/hero-1.png')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇹🇭</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    Southeast Asia
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Bangkok, Singapore, Manila
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Bangkok, Singapore, Manila
-              </p>
             </div>
           </motion.div>
 
@@ -233,16 +289,23 @@ export default function Global() {
             transition={{ duration: 0.8, delay: 0.9 }}
             whileHover={{ scale: 1.05 }}
           >
-            <div className="bg-white rounded-2xl p-4 shadow-xl border border-[#E8ECEF] group">
-              <div className="flex items-center mb-2">
-                <span className="text-2xl mr-2">🇰🇷</span>
-                <h3 className="text-lg font-bold text-[#212121] font-poppins">
-                  Korea
-                </h3>
+            <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E8ECEF] group cursor-pointer">
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/hero/hero-2.png')" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="relative p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-2xl mr-2">🇰🇷</span>
+                  <h3 className="text-lg font-bold text-white font-poppins">
+                    Korea
+                  </h3>
+                </div>
+                <p className="text-white/90 text-sm font-inter">
+                  Seoul, Busan, Incheon
+                </p>
               </div>
-              <p className="text-[#6C7A89] text-sm font-inter">
-                Seoul, Busan, Incheon
-              </p>
             </div>
           </motion.div>
         </div>
@@ -271,7 +334,7 @@ export default function Global() {
           />
           <motion.path
             d="M 300 280 Q 500 240 700 270"
-            stroke="#FF6B35"
+            stroke="var(--primary)"
             strokeWidth="2"
             fill="none"
             strokeDasharray="5,5"
@@ -324,7 +387,7 @@ export default function Global() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#FF6B35] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#E55A2B] transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
+          className="bg-[var(--primary)] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[var(--primary-hover)] transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
         >
           Work With Us
         </motion.button>
