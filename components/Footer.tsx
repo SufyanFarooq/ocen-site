@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, MapPin, Phone, Ship, Globe, TrendingUp } from 'lucide-react'
+import { Mail, MapPin, Phone, Ship, Globe, TrendingUp, Map } from 'lucide-react'
 
 const Footer = () => {
   const footerLinks = {
@@ -80,32 +80,26 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <div className="flex items-center space-x-2 mb-6">
-              <Image 
-                src="/black-logo.png" 
-                alt="YST - YIWU SALAH Traders Logo" 
-                width={120} 
+            <div className="flex items-center space-x-2">
+              {/* <Image
+                src="/black-logo.png"
+                alt="YST - YIWU SALAH Traders Logo"
+                width={120}
+                height={40}
+                className="w-40 object-contain mb-2"
+              /> */}
+              <Image
+                src="/logo-two.png"
+                alt="YST - YIWU SALAH Traders Logo"
+                width={190}
                 height={120}
-                className="h-40 w-40 object-contain"
+                className="object-cover"
               />
             </div>
             <p className="text-[#E8ECEF] mb-6 leading-relaxed">
               Your trusted sourcing partner connecting Australian businesses with premium Chinese manufacturers.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                <Mail className="h-5 w-5 text-[var(--primary)]" />
-                <span>info@oceanportlink.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                <MapPin className="h-5 w-5 text-[var(--primary)]" />
-                <span>1649 Ocean Drive Road, Lake Cathie NSW 2445</span>
-              </div>
-              <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                <Phone className="h-5 w-5 text-[var(--primary)]" />
-                <span>+61 (0) 400 000 000</span>
-              </div>
-            </div>
+
           </motion.div>
 
           {/* Company Links */}
@@ -114,7 +108,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-lg font-semibold mb-6 text-[var(--primary)]">Company</h3>
+            <h3 className="text-lg font-semibold mb-2 text-white">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -135,7 +129,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-lg font-semibold mb-6 text-[var(--primary)]">Services</h3>
+            <h3 className="text-lg font-semibold mb-2 text-white">Services</h3>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -156,9 +150,9 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-lg font-semibold mb-6 text-[var(--primary)]">Resources</h3>
+            <h3 className="text-lg font-semibold mb-2 text-white">Contact Us</h3>
             <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
+              {/* {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -167,7 +161,22 @@ const Footer = () => {
                     {link.name}
                   </Link>
                 </li>
-              ))}
+              ))} */}
+
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-[#E8ECEF]">
+                  <Mail className="h-5 text-white w-5 ml-4" />
+                  <span>yiwusalahtrading@gmail.com</span>
+                </div>
+                <div className="flex items-center space-x-3 text-[#E8ECEF]">
+                  <Map className="h-5 w-20 text-white" />
+                  <span>Pakistan office and warehouse address : ADD : G.T ROAD,SALAMT PURA STATION,KOH-E-NOOR KANTA, LAHORE </span>
+                </div>
+                <div className="flex items-center space-x-3 text-[#E8ECEF]">
+                  <Phone className="h-5 w-5 text-white" />
+                  <span>15058674331</span>
+                </div>
+              </div>
             </ul>
           </motion.div>
         </div>
@@ -179,7 +188,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 pt-8 border-t border-[#E8ECEF]"
         >
-          <h3 className="text-xl font-semibold mb-6 text-[var(--primary)] text-center">
+          <h3 className="text-xl font-semibold mb-6 text-white text-center">
             Global Solutions
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-sm">

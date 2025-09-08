@@ -46,19 +46,19 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'info@oceanportlink.com',
+      value: 'yiwusalahtrading@gmail.com',
       description: 'Send us an email anytime',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+61 (0) 400 000 000',
+      value: '15058674331',
       description: 'Call us during business hours',
     },
     {
       icon: MapPin,
       title: 'Address',
-      value: '1649 Ocean Drive Road, Lake Cathie NSW 2445',
+      value: 'Pakistan office and warehouse address : ADD : G.T ROAD,SALAMT PURA STATION,KOH-E-NOOR KANTA, LAHORE',
       description: 'Visit our office',
     },
   ]

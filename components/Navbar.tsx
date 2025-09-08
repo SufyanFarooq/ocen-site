@@ -46,11 +46,11 @@ const Navbar = () => {
             <Link href="/">
               <div className="relative">
                 <Image 
-                  src="/black-logo.png" 
+                  src="/logo-two.png" 
                   alt="YST - YIWU SALAH Traders Logo" 
-                  width={120} 
+                  width={190} 
                   height={120}
-                  className="h-40 w-40 object-contain"
+                  className="object-cover"
                 />
               </div>
             </Link>
@@ -82,13 +82,15 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#0B1D3A] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Request a Quote
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#0B1D3A] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Request a Quote
+              </motion.button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -130,14 +132,17 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              <motion.button
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#0B1D3A] hover:bg-[#23344E] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 w-full"
-              >
-                Request a Quote
-              </motion.button>
+              <Link href="/contact" className="w-full">
+                <motion.button
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-[#0B1D3A] hover:bg-[#23344E] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 w-full"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Request a Quote
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         )}

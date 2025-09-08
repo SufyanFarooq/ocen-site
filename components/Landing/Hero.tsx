@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowRight, Ship, Globe, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const Hero = () => {
@@ -268,44 +269,52 @@ const Hero = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="absolute top-1/2 right-8 transform -translate-y-1/2 hidden lg:flex flex-col gap-4 z-40">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#0B1D3A] text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins"
-            >
-              <Ship className="w-5 h-5" />
-              Start Sourcing
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#0B1D3A] text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins"
+              >
+                <Ship className="w-5 h-5" />
+                Start Sourcing
+              </motion.button>
+            </Link>
             
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-white hover:text-[#3E5C76] transition-all duration-300 flex items-center justify-center space-x-2 font-poppins whitespace-nowrap"
-            >
-              <span>Learn More</span>
-              <Ship className="h-4 w-4" />
-            </motion.button>
+            <Link href="/services">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-6 py-3 rounded-2xl font-semibold text-base hover:bg-white hover:text-[#3E5C76] transition-all duration-300 flex items-center justify-center space-x-2 font-poppins whitespace-nowrap"
+              >
+                <span>Learn More</span>
+                <Ship className="h-4 w-4" />
+              </motion.button>
+            </Link>
           </div>
 
           {/* Mobile CTA Buttons */}
           <div className="absolute bottom-31 left-1/2 transform -translate-x-1/2 flex lg:hidden flex-col sm:flex-row gap-4 z-40 w-full max-w-md px-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#0B1D3A] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins w-full"
-            >
-              <Ship className="w-5 h-5" />
-              Start Sourcing
-            </motion.button>
+            <Link href="/contact" className="w-full">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#0B1D3A] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[#23344E] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 font-poppins w-full"
+              >
+                <Ship className="w-5 h-5" />
+                Start Sourcing
+              </motion.button>
+            </Link>
             
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-[#3E5C76] transition-all duration-300 flex items-center justify-center space-x-2 font-poppins w-full"
-            >
-              <span>Learn More</span>
-              <Ship className="h-5 w-5" />
-            </motion.button>
+            <Link href="/services" className="w-full">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-[#3E5C76] transition-all duration-300 flex items-center justify-center space-x-2 font-poppins w-full"
+              >
+                <span>Learn More</span>
+                <Ship className="h-5 w-5" />
+              </motion.button>
+            </Link>
           </div>
 
         
