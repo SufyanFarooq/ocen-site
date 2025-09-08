@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Link from "next/link";
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -166,14 +167,16 @@ export default function FAQPage() {
           >
             Can't find the answer you're looking for? Our team is here to help with any specific questions about your sourcing needs.
           </motion.p>
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-[#3E5C76] hover:bg-[#2A4A5F] text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:shadow-xl"
-          >
-            Contact Us
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-[#3E5C76] hover:bg-[#2A4A5F] text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:shadow-xl"
+            >
+              Contact Us
+            </motion.button>
+          </Link>
         </div>
       </section>
       <Footer />

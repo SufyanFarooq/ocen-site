@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion, useInView } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 /** Small count-up component */
 function Counter({ end = 0, duration = 1200 }: { end: number; duration?: number }) {
@@ -94,9 +95,11 @@ export default function WhyChoseUSPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <button className="px-6 py-3 rounded-xl bg-[var(--primary)] text-white font-semibold shadow hover:shadow-lg transition hover:bg-[var(--primary-hover)] font-poppins">
-              Work With Us
-            </button>
+            <Link href="/contact">
+              <button className="px-6 py-3 rounded-xl bg-[var(--primary)] text-white font-semibold shadow hover:shadow-lg transition hover:bg-[var(--primary-hover)] font-poppins">
+                Work With Us
+              </button>
+            </Link>
             <a href="#process" className="px-6 py-3 rounded-xl bg-white/10 text-white font-semibold border border-white/30 backdrop-blur-sm hover:bg-white/15 transition font-poppins">
               See How We Work
             </a>
