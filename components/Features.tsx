@@ -34,8 +34,8 @@ const Features = () => {
     },
     {
       icon: Users,
-      title: 'Australian Company',
-      description: 'Payment methods, Communication, and accountability are the same as with any local company in Australia.',
+      title: 'France Company',
+      description: 'Payment methods, Communication, and accountability are the same as with any local company in France.',
       color: 'from-[#FF6B35] to-[#E55A2B]',
       bgGradient: 'from-[#F0F3F4] to-[#E8ECEF]',
     },
@@ -248,7 +248,7 @@ const Features = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="text-2xl sm:text-3xl font-bold ocean-text-gradient text-center mb-8 font-poppins"
             >
-              You have two options when it comes to buying from China as an Australian business
+              You have two options when it comes to buying from China as an France business
             </motion.h3>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">

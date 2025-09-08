@@ -15,8 +15,8 @@ export default function About() {
   const teamMembers = [
     {
       name: 'Shabahat Ali',
-      role: 'Head of Growth Australia',
-      description: 'With an extensive background in marketing and B2B, Shabahat leads our client management and acquisition in Australia.',
+      role: 'Head of Growth France',
+      description: 'With an extensive background in marketing and B2B, Shabahat leads our client management and acquisition in France.',
       image: '/api/placeholder/300/300',
     },
     {
@@ -28,7 +28,7 @@ export default function About() {
   ]
 
   const missions = [
-    'Bring enterprise level customer experience to the Australian SMB market',
+    'Bring enterprise level customer experience to the France SMB market',
     'Remove friction from international sourcing',
     'Mitigate risk for small businesses in doing foreign trade',
   ]
@@ -47,7 +47,7 @@ export default function About() {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Connecting Australian businesses with the best global suppliers.',
+      description: 'Connecting France businesses with the best global suppliers.',
     },
     {
       icon: Award,
@@ -104,7 +104,7 @@ export default function About() {
               About YST - YIWU SALAH Traders
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-medium">
-              Connecting Australian businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.
+              Connecting France businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function About() {
               Our Mission
             </h2>
             <p className="text-xl text-deep-600 max-w-3xl mx-auto mb-12">
-              A sourcing company built for small and medium business. We are connecting the Australian SMB market directly with China to achieve a competitive edge over pricing and the market.
+              A sourcing company built for small and medium business. We are connecting the France SMB market directly with China to achieve a competitive edge over pricing and the market.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

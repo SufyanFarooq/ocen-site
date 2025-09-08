@@ -10,7 +10,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Sarah Johnson",
-      company: "Australian Retail Solutions",
+      company: "France Retail Solutions",
       role: "CEO",
       content:
         "YST transformed our sourcing process completely. Their Yiwu market guidance saved us weeks of research, and the quality control exceeded our expectations. Highly recommended!",
@@ -28,7 +28,7 @@ export default function Testimonials() {
     },
     {
       name: "Emma Rodriguez",
-      company: "Eco Products Australia",
+      company: "Eco Products France",
       role: "Founder",
       content:
         "Working with YST has been a game-changer for our business. Their expertise in customs clearance and shipping made international sourcing feel effortless.",

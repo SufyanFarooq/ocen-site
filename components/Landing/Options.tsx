@@ -13,7 +13,7 @@ export default function Options() {
       >
         <h2 className="text-4xl md:text-5xl font-bold text-[#212121] mb-6 font-poppins">
           You have <span className="text-[#3E5C76]">two options</span> when
-          it comes to buying from China as an Australian business
+          it comes to buying from China as an France business
         </h2>
         <p className="text-xl text-[#6C7A89] max-w-3xl mx-auto font-inter">
           Choose the path that works best for your business needs and growth
@@ -58,7 +58,7 @@ export default function Options() {
             Prices are higher than Chinese market prices because suppliers
             are aware their customers are overseas & have no frame of
             reference. Plus, one thing wrong and you have to ship back from
-            Australia and wait for them to rectify & ship again that is if
+            France and wait for them to rectify & ship again that is if
             they agree to this in the first place.
           </p>
         </motion.div>

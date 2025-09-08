@@ -12,7 +12,7 @@ export default function FAQPage() {
   const faqs = [
     {
       question: "What is YST - YIWU SALAH Traders and what services do you provide?",
-      answer: "YST - YIWU SALAH Traders is a comprehensive sourcing company that connects Australian businesses with verified manufacturers and suppliers worldwide. We provide end-to-end sourcing solutions including Yiwu market guidance, airport pickup, order tracking, quality control, container loading, customs clearance, and shipping services."
+      answer: "YST - YIWU SALAH Traders is a comprehensive sourcing company that connects France businesses with verified manufacturers and suppliers worldwide. We provide end-to-end sourcing solutions including Yiwu market guidance, airport pickup, order tracking, quality control, container loading, customs clearance, and shipping services."
     },
     {
       question: "How do you ensure the quality of products from suppliers?",

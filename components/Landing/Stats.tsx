@@ -18,7 +18,7 @@ export default function Stats() {
             Our <span className="text-[#3E5C76]">Global Reach</span>
           </h2>
           <p className="text-xl text-[#6C7A89] max-w-2xl mx-auto font-inter">
-            Connecting Australian businesses with verified manufacturers and
+            Connecting France businesses with verified manufacturers and
             suppliers worldwide
           </p>
         </div>

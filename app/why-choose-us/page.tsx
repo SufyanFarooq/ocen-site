@@ -50,7 +50,7 @@ export default function WhyChoseUSPage() {
   const whyChoose = [
     { icon: '💰', title: 'No Flat Fee', description: "If your total order cost is more than $2500, we don't charge any flat fees.", image: '/choose-us/no-flat-fee.jpg' },
     { icon: '📦', title: 'No MOQ', description: 'No minimum order limit, start small before scaling.', image: '/choose-us/no-moq.jpg' },
-    { icon: '🇦🇺', title: 'Australian Company', description: 'Local payment, communication, and accountability.', image: '/choose-us/australian-company.jpg' },
+    { icon: '🇦🇺', title: 'France Company', description: 'Local payment, communication, and accountability.', image: '/choose-us/australian-company.jpg' },
     { icon: '📋', title: 'Free Quote', description: 'Get a free estimate for your product inquiry.', image: '/choose-us/free-quote.jpg' },
   ];
 
@@ -85,7 +85,7 @@ export default function WhyChoseUSPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            We bridge Australian businesses and Chinese manufacturers with an end-to-end sourcing and logistics partner you can trust.
+            We bridge France businesses and Chinese manufacturers with an end-to-end sourcing and logistics partner you can trust.
           </motion.p>
 
           <motion.div

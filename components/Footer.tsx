@@ -97,7 +97,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-[#E8ECEF] mb-6 leading-relaxed">
-              Your trusted sourcing partner connecting Australian businesses with premium Chinese manufacturers.
+              Your trusted sourcing partner connecting France businesses with premium Chinese manufacturers.
             </p>
 
           </motion.div>
@@ -165,16 +165,20 @@ const Footer = () => {
 
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                  <Mail className="h-5 text-white w-5 ml-4" />
+                  <Mail className="h-5 text-white w-5" />
                   <span>yiwusalahtrading@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                  <Map className="h-5 w-20 text-white" />
+                  <Map className="h-5 wid_map text-white" style={{width: '4rem'}}/>
                   <span>Pakistan office and warehouse address : ADD : G.T ROAD,SALAMT PURA STATION,KOH-E-NOOR KANTA, LAHORE </span>
                 </div>
                 <div className="flex items-center space-x-3 text-[#E8ECEF]">
                   <Phone className="h-5 w-5 text-white" />
-                  <span>15058674331</span>
+                  <span>+86 15058674331</span>
+                </div>
+                <div className="flex items-center space-x-3 text-[#E8ECEF]">
+                  <Phone className="h-5 w-5 text-white" />
+                  <span>+92 3244744890</span>
                 </div>
               </div>
             </ul>

@@ -52,7 +52,13 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '15058674331',
+      value: '+86 15058674331',
+      description: 'Call us during business hours',
+    },
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+92 3244744890',
       description: 'Call us during business hours',
     },
     {
@@ -218,7 +224,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-deep-300 rounded-lg focus:ring-2 focus:ring-ocean-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+1 for USA, +61 for Australia"
+                      placeholder="+1 for USA, +86 for France"
                     />
                   </div>
                   
@@ -286,6 +292,7 @@ export default function Contact() {
                         </h3>
                         <p className="text-ocean-600 font-medium mb-1">
                           {info.value}
+                          
                         </p>
                         <p className="text-deep-600 text-sm">
                           {info.description}
