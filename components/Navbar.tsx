@@ -47,7 +47,7 @@ const Navbar = () => {
               <div className="relative">
                 <Image 
                   src="/logo-one.png" 
-                  alt="YST - YIWU SALAH Traders Logo" 
+                  alt="YST - YIWU SALAH Trading Logo" 
                   width={190} 
                   height={120}
                   className="object-cover"

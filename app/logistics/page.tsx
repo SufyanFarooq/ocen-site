@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Ship, Package, Globe, Shield, Clock, DollarSign } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Link from "next/link";
 
 export default function FreightShippingPage() {
   const features = [
@@ -253,14 +254,16 @@ export default function FreightShippingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl font-bold text-[#212121] mb-6"
-          >
-            Ready to Ship Your Cargo?
-          </motion.h2>
+          <Link href="/contact">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl font-bold text-[#212121] mb-6 hover:text-[#3E5C76] transition-colors duration-300 cursor-pointer"
+            >
+              Ready to Ship Your Cargo?
+            </motion.h2>
+          </Link>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

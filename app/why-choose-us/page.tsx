@@ -77,7 +77,7 @@ export default function WhyChoseUSPage() {
             transition={{ duration: 0.6 }}
           >
             Source smarter. Ship faster. <br className="hidden md:block" />
-            Grow confidently with <span className="text-[var(--primary)]">YST — YIWU SALAH Traders</span>.
+            Grow confidently with <span className="text-[var(--primary)]">YST — YIWU SALAH Trading</span>.
           </motion.h1>
 
           <motion.p

@@ -17,9 +17,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
-  description: 'YST - YIWU SALAH Traders. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
-  keywords: 'YST, YIWU SALAH Traders, sourcing, China, France, import, export, manufacturing, suppliers',
+  title: 'YST - YIWU SALAH Trading | Your Trusted Sourcing Partner',
+  description: 'YST - YIWU SALAH Trading. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
+  keywords: 'YST, YIWU SALAH Trading, sourcing, China, France, import, export, manufacturing, suppliers',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
-    description: 'YST - YIWU SALAH Traders. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
+    title: 'YST - YIWU SALAH Trading | Your Trusted Sourcing Partner',
+    description: 'YST - YIWU SALAH Trading. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
     url: 'https://your-domain.com',
-    siteName: 'YST - YIWU SALAH Traders',
+    siteName: 'YST - YIWU SALAH Trading',
     images: [
       {
         url: '/black-logo.png',
         width: 1200,
         height: 630,
-        alt: 'YST - YIWU SALAH Traders Logo',
+        alt: 'YST - YIWU SALAH Trading Logo',
       },
     ],
     locale: 'en_US',
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
-    description: 'YST - YIWU SALAH Traders. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
+    title: 'YST - YIWU SALAH Trading | Your Trusted Sourcing Partner',
+    description: 'YST - YIWU SALAH Trading. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
     images: ['/black-logo.png'],
   },
 }

@@ -14,15 +14,15 @@ export default function About() {
 
   const teamMembers = [
     {
-      name: 'Shabahat Ali',
-      role: 'Head of Growth China',
-      description: 'With an extensive background in marketing and B2B, Shabahat leads our client management and acquisition in China.',
+      name: 'Abdul Rehman Bin Sohail',
+      role: 'CEO OF YIWU SALAH TRADING',
+      description: 'With an extensive background in international trade and business development, Abdul Rehman leads our strategic operations and client management across global markets.',
       image: '/api/placeholder/300/300',
     },
     {
-      name: 'Shujaat Ali',
-      role: 'Head of Sourcing China',
-      description: 'Shujaat has been active in the supply chain industry for over 8 years. Starting out as a customs agent in Pakistan, he is currently on the ground in the Chinese market finding deals for our clients.',
+      name: 'Saad Bin Sohail',
+      role: 'CO-FOUNDER OF YIWU SALAH TRADING',
+      description: 'Saad has been active in the supply chain industry for over 8 years. Starting out as a customs agent in Pakistan, he is currently on the ground in the Chinese market finding deals for our clients.',
       image: '/api/placeholder/300/300',
     },
   ]
@@ -47,7 +47,7 @@ export default function About() {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Connecting China businesses with the best global suppliers.',
+      description: 'Connecting worldwide businesses with the best global suppliers.',
     },
     {
       icon: Award,
@@ -101,10 +101,10 @@ export default function About() {
         <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
-              About YST - YIWU SALAH Traders
+              About YST - YIWU SALAH Trading
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-medium">
-              Connecting China businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.
+              Connecting worldwide businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.
             </p>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function About() {
               Our Mission
             </h2>
             <p className="text-xl text-deep-600 max-w-3xl mx-auto mb-12">
-              A sourcing company built for small and medium business. We are connecting the China SMB market directly with China to achieve a competitive edge over pricing and the market.
+              A sourcing company built for small and medium business. We are connecting the SMB market directly with China to achieve a competitive edge over pricing and the market.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

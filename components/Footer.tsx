@@ -78,7 +78,7 @@ const Footer = () => {
               /> */}
               <Image
                 src="/logo-one.png"
-                alt="YST - YIWU SALAH Traders Logo"
+                alt="YST - YIWU SALAH Trading Logo"
                 width={190}
                 height={120}
                 className="object-cover"
@@ -155,7 +155,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3 text-[#E8ECEF]">
                 <MessageCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
-                <span className="leading-relaxed">WeChat: yiwusalah_trading</span>
+                <span className="leading-relaxed">WeChatId: yiwusalahtrading</span>
               </div>
               <div className="flex items-start space-x-3 text-[#E8ECEF]">
                 <Map className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
