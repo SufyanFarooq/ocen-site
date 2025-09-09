@@ -8,7 +8,7 @@ export default function CTA() {
         Ready to Start Sourcing?
       </h2>
       <p className="text-xl text-[#E8ECEF] max-w-3xl mx-auto mb-12 font-inter">
-        Join hundreds of France businesses that trust us with their
+        Join hundreds of worldwide businesses that trust us with their
         sourcing needs.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

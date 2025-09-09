@@ -14,8 +14,8 @@ const Hero = () => {
   const slides = [
     {
       title: "Source products from China",
-      subtitle: "through an France partner",
-      description: "Your Trusted Sourcing Agents In France Helping You In Sourcing Products From China At The Best Possible Rate.",
+      subtitle: "through a partner",
+      description: "Your Trusted Sourcing Agents In worldwide Helping You In Sourcing Products From China At The Best Possible Rate.",
       image: "/hero/hero-1.png",
       icon: Ship,
       gradient: "from-[#3E5C76] via-[#6C7A89] to-[#8B9CA8]",

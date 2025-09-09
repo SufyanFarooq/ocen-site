@@ -85,7 +85,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-[#E8ECEF] mb-6 leading-relaxed">
-              Your trusted sourcing partner connecting France businesses with premium Chinese manufacturers.
+              Your trusted sourcing partner connecting worldwide businesses with premium Chinese manufacturers.
             </p>
 
           </motion.div>

@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
-  description: 'YST - YIWU SALAH Traders. Source products from China through an France partner. Your trusted sourcing agents helping you source products at the best possible rates.',
+  description: 'YST - YIWU SALAH Traders. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
   keywords: 'YST, YIWU SALAH Traders, sourcing, China, France, import, export, manufacturing, suppliers',
   icons: {
     icon: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
-    description: 'YST - YIWU SALAH Traders. Source products from China through an France partner. Your trusted sourcing agents helping you source products at the best possible rates.',
+    description: 'YST - YIWU SALAH Traders. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
     url: 'https://your-domain.com',
     siteName: 'YST - YIWU SALAH Traders',
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'YST - YIWU SALAH Traders | Your Trusted Sourcing Partner',
-    description: 'YST - YIWU SALAH Traders. Source products from China through an France partner. Your trusted sourcing agents helping you source products at the best possible rates.',
+    description: 'YST - YIWU SALAH Traders. Source products from China. Your trusted sourcing agents helping you source products at the best possible rates.',
     images: ['/black-logo.png'],
   },
 }

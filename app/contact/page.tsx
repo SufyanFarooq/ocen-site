@@ -250,7 +250,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-deep-300 rounded-lg focus:ring-2 focus:ring-ocean-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+1 for USA, +86 for France"
+                      placeholder="+1 for USA, +86 for China"
                     />
                   </div>
                   

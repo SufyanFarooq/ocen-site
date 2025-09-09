@@ -86,7 +86,7 @@ export default function WhyChoseUSPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            We bridge France businesses and Chinese manufacturers with an end-to-end sourcing and logistics partner you can trust.
+            We bridge China businesses and Chinese manufacturers with an end-to-end sourcing and logistics partner you can trust.
           </motion.p>
 
           <motion.div
