@@ -46,7 +46,7 @@ const Navbar = () => {
             <Link href="/">
               <div className="relative">
                 <Image 
-                  src="/logo-two.png" 
+                  src="/logo-one.png" 
                   alt="YST - YIWU SALAH Traders Logo" 
                   width={190} 
                   height={120}

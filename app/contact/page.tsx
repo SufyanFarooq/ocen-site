@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,7 @@ export default function Contact() {
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -26,13 +28,37 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitError('')
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-    setFormData({ name: '', company: '', email: '', phone: '', query: '' })
+    try {
+      // EmailJS configuration - Replace these with your actual EmailJS credentials
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_8stgp5e'
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_kzf1tbj'
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'wFB_yeclDFKqNOqA0'
+      
+      // Initialize EmailJS
+      emailjs.init(publicKey)
+      
+      // Send email
+      const result = await emailjs.send(serviceId, templateId, {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        message: formData.query,
+        to_email: 'yiwusalahtrading@gmail.com',
+        reply_to: formData.email
+      })
+      
+      console.log('Email sent successfully:', result.text)
+      setIsSubmitted(true)
+      setFormData({ name: '', company: '', email: '', phone: '', query: '' })
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setSubmitError('Failed to send message. Please try again or contact us directly at yiwusalahtrading@gmail.com')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -244,6 +270,13 @@ export default function Contact() {
                     />
                   </div>
                   
+                  {/* Error Message */}
+                  {submitError && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <p className="text-red-600 text-sm">{submitError}</p>
+                    </div>
+                  )}
+                  
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -290,10 +323,20 @@ export default function Contact() {
                         <h3 className="text-lg font-semibold text-deep-800 mb-1">
                           {info.title}
                         </h3>
-                        <p className="text-ocean-600 font-medium mb-1">
-                          {info.value}
-                          
-                        </p>
+                        {info.title === 'Address' ? (
+                          <a 
+                            href="https://google.com/maps?q=31.588624954223633,74.41537475585938&z=17&hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-ocean-600 font-medium mb-1 hover:text-ocean-700 transition-colors duration-200 cursor-pointer"
+                          >
+                            {info.value}
+                          </a>
+                        ) : (
+                          <p className="text-ocean-600 font-medium mb-1">
+                            {info.value}
+                          </p>
+                        )}
                         <p className="text-deep-600 text-sm">
                           {info.description}
                         </p>

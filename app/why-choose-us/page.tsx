@@ -51,7 +51,7 @@ export default function WhyChoseUSPage() {
   const whyChoose = [
     { icon: '💰', title: 'No Flat Fee', description: "If your total order cost is more than $2500, we don't charge any flat fees.", image: '/choose-us/no-flat-fee.jpg' },
     { icon: '📦', title: 'No MOQ', description: 'No minimum order limit, start small before scaling.', image: '/choose-us/no-moq.jpg' },
-    { icon: '🇦🇺', title: 'France Company', description: 'Local payment, communication, and accountability.', image: '/choose-us/australian-company.jpg' },
+    // { icon: '🇦🇺', title: 'France Company', description: 'Local payment, communication, and accountability.', image: '/choose-us/australian-company.jpg' },
     { icon: '📋', title: 'Free Quote', description: 'Get a free estimate for your product inquiry.', image: '/choose-us/free-quote.jpg' },
   ];
 
@@ -217,7 +217,7 @@ export default function WhyChoseUSPage() {
             Why <span className="text-[#6C7A89]">choose us</span>?
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {whyChoose.map((item) => (
               <motion.article
                 key={item.title}
@@ -239,7 +239,6 @@ export default function WhyChoseUSPage() {
                   <p className="mt-2 text-sm text-[#6C7A89] font-inter">{item.description}</p>
                 </div>
 
-                {/* hover reveal mini-case */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
                   <div className="absolute bottom-6 left-6 right-6 text-white text-sm">
                     <div className="font-semibold mb-1">Example</div>

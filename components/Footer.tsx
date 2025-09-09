@@ -3,27 +3,15 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, MapPin, Phone, Ship, Globe, TrendingUp, Map } from 'lucide-react'
+import { Mail, MapPin, Phone, Ship, Globe, TrendingUp, Map, MessageCircle } from 'lucide-react'
 
 const Footer = () => {
   const footerLinks = {
     company: [
-      { name: 'Home', href: '/' },
       { name: 'About Us', href: '/about' },
-      { name: 'Product Catalogs', href: '/products' },
-      { name: 'Market Insights', href: '/insights' },
-    ],
-    services: [
-      { name: 'Sourcing', href: '/services/sourcing' },
-      { name: 'Logistics', href: '/services/logistics' },
-      { name: 'Quality Control', href: '/services/quality' },
-      { name: 'Custom Manufacturing', href: '/services/manufacturing' },
-    ],
-    resources: [
-      { name: 'Sourcing Tips', href: '/tips' },
-      { name: 'Import Guide', href: '/guide' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Services', href: '/services' },
+      { name: 'Logistics', href: '/logistics' },
+      { name: 'Contact Us', href: '/contact' },
     ],
   }
 
@@ -89,7 +77,7 @@ const Footer = () => {
                 className="w-40 object-contain mb-2"
               /> */}
               <Image
-                src="/logo-two.png"
+                src="/logo-one.png"
                 alt="YST - YIWU SALAH Traders Logo"
                 width={190}
                 height={120}
@@ -123,65 +111,61 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Services Links */}
+
+          {/* Pakistan Office */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-lg font-semibold mb-2 text-white">Services</h3>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h3 className="text-lg font-semibold mb-2 text-white">Pakistan Office</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3 text-[#E8ECEF]">
+                <Mail className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                <span className="leading-relaxed">yiwusalahtrading@gmail.com</span>
+              </div>
+              <div className="flex items-start space-x-3 text-[#E8ECEF]">
+                <Map className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                <a 
+                  href="https://google.com/maps?q=31.588624954223633,74.41537475585938&z=17&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed hover:text-[var(--primary)] transition-colors duration-200 cursor-pointer"
+                >
+                  G.T ROAD, SALAMT PURA STATION, KOH-E-NOOR KANTA, LAHORE
+                </a>
+              </div>
+              <div className="flex items-start space-x-3 text-[#E8ECEF]">
+                <Phone className="h-5 w-5 text-white flex-shrink-0 mt-5" />
+                <div className="flex flex-col space-y-1">
+                  <span className="leading-relaxed">+92 324 4744890</span>
+                  <span className="leading-relaxed">+92 321 8853747</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Resources Links */}
+          {/* China Office */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-lg font-semibold mb-2 text-white">Contact Us</h3>
-            <ul className="space-y-3">
-              {/* {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))} */}
-
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                  <Mail className="h-5 text-white w-5" />
-                  <span>yiwusalahtrading@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                  <Map className="h-5 wid_map text-white" style={{width: '4rem'}}/>
-                  <span>Pakistan office and warehouse address : ADD : G.T ROAD,SALAMT PURA STATION,KOH-E-NOOR KANTA, LAHORE </span>
-                </div>
-                <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                  <Phone className="h-5 w-5 text-white" />
-                  <span>+86 15058674331</span>
-                </div>
-                <div className="flex items-center space-x-3 text-[#E8ECEF]">
-                  <Phone className="h-5 w-5 text-white" />
-                  <span>+92 3244744890</span>
-                </div>
+            <h3 className="text-lg font-semibold mb-2 text-white">China Office</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3 text-[#E8ECEF]">
+                <MessageCircle className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                <span className="leading-relaxed">WeChat: yiwusalah_trading</span>
               </div>
-            </ul>
+              <div className="flex items-start space-x-3 text-[#E8ECEF]">
+                <Map className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                <span className="leading-relaxed">浙江省金华市义乌市稠城街道车站路134号后面亿景建筑公司1楼 102</span>
+              </div>
+              <div className="flex items-start space-x-3 text-[#E8ECEF]">
+                <Phone className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                <span className="leading-relaxed">+86 15058674331</span>
+              </div>
+            </div>
           </motion.div>
         </div>
 
@@ -193,21 +177,41 @@ const Footer = () => {
           className="mt-16 pt-8 border-t border-[#E8ECEF]"
         >
           <h3 className="text-xl font-semibold mb-6 text-white text-center">
-            Global Solutions
+            Our Global Presence - Expanding Worldwide
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-sm">
-            {[
-              'Sydney, Melbourne, Brisbane',
-              'Los Angeles, Long Beach, Savannah',
-              'Hamburg, Rotterdam, Antwerp',
-              'Ningbo, Xiamen, Shanghai',
-              'Jebbel Ali, Sharjah, Bahrain',
-              'Incheon, Pusan',
-            ].map((location, index) => (
-              <div key={index} className="text-[#E8ECEF] text-center">
-                {location}
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-sm">
+            {/* Current Offices */}
+            <div className="text-center">
+              <div className="text-[#E8ECEF] font-medium mb-1">Pakistan</div>
+              <div className="text-[#8B9CA8] text-xs">Lahore Office</div>
+            </div>
+            <div className="text-center">
+              <div className="text-[#E8ECEF] font-medium mb-1">China</div>
+              <div className="text-[#8B9CA8] text-xs">Yiwu Office</div>
+            </div>
+            
+            {/* Coming Soon Offices */}
+            <div className="text-center">
+              <div className="text-[#E8ECEF] font-medium mb-1">France</div>
+              <div className="text-[#8B9CA8] text-xs mb-1">Paris Office</div>
+              <span className="inline-block bg-[#FF6B35] text-white text-xs px-2 py-1 rounded-full font-medium">
+                Coming Soon
+              </span>
+            </div>
+            <div className="text-center">
+              <div className="text-[#E8ECEF] font-medium mb-1">UK</div>
+              <div className="text-[#8B9CA8] text-xs mb-1">London Office</div>
+              <span className="inline-block bg-[#FF6B35] text-white text-xs px-2 py-1 rounded-full font-medium">
+                Coming Soon
+              </span>
+            </div>
+            <div className="text-center">
+              <div className="text-[#E8ECEF] font-medium mb-1">UAE</div>
+              <div className="text-[#8B9CA8] text-xs mb-1">Dubai Office</div>
+              <span className="inline-block bg-[#FF6B35] text-white text-xs px-2 py-1 rounded-full font-medium">
+                Coming Soon
+              </span>
+            </div>
           </div>
         </motion.div>
 
@@ -219,7 +223,7 @@ const Footer = () => {
           className="mt-12 pt-8 border-t border-[#E8ECEF] flex flex-col md:flex-row justify-between items-center"
         >
           <div className="text-center text-[#E8ECEF] text-sm">
-            © 2024-2025 YST - YIWU SALAH Traders. All rights reserved.
+            © 2022-2025 YST - YIWU SALAH Trading. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
