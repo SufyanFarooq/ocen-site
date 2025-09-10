@@ -240,16 +240,16 @@ const Footer = () => {
             
             {/* Social Media Icons */}
             <div className="flex space-x-4">
-              <Link 
+              {/* <Link 
                 href="https://facebook.com/yiwusalahtrading" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
               >
                 <Facebook className="h-5 w-5" />
-              </Link>
+              </Link> */}
               <Link 
-                href="https://instagram.com/yiwusalahtrading" 
+                href="https://www.instagram.com/abdulrehmanbinsohail?igsh=cHl2czMzbTZtMDlp" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
