@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 export default function Global() {
@@ -384,13 +385,15 @@ export default function Global() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
       >
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-[var(--primary)] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[var(--primary-hover)] transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
-        >
-          Work With Us
-        </motion.button>
+        <Link href="/contact">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-[var(--primary)] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[var(--primary-hover)] transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
+          >
+            Work With Us
+          </motion.button>
+        </Link>
       </motion.div>
     </div>
   </section>

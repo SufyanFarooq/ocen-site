@@ -21,7 +21,7 @@ const Hero = () => {
       gradient: "from-[#3E5C76] via-[#6C7A89] to-[#8B9CA8]",
     },
     {
-      title: "Gain a competitive edge",
+      title: "FCL & LCL Freight Shipping",
       subtitle: "by accessing our vetted suppliers",
       description: "We have local representatives in the Chinese market that help you unlock the product sources not easily available to foreign buyers.",
       image: "/hero/hero-2.png",
@@ -163,7 +163,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+      <div className="relative mt-20 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
         <div className="w-full">
           <AnimatePresence mode="wait">
             <motion.div
@@ -280,7 +280,7 @@ const Hero = () => {
               </motion.button>
             </Link>
             
-            <Link href="/services">
+            <Link href="/logistics">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

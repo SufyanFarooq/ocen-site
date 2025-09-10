@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -12,12 +13,16 @@ export default function CTA() {
         sourcing needs.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <button className="bg-white text-[#3E5C76] px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl font-poppins">
-          Get Started Today
-        </button>
-        <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-[#3E5C76] transition-all duration-300 font-poppins">
-          Learn More
-        </button>
+        <Link href="/contact">
+          <button className="bg-white text-[#3E5C76] px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl font-poppins">
+            Get Started Today
+          </button>
+        </Link>
+        <Link href="/services">
+          <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white hover:text-[#3E5C76] transition-all duration-300 font-poppins">
+            Learn More
+          </button>
+        </Link>
       </div>
     </div>
   </section>

@@ -25,12 +25,21 @@ export default function About() {
       description: 'Saad has been active in the supply chain industry for over 8 years. Starting out as a customs agent in Pakistan, he is currently on the ground in the Chinese market finding deals for our clients.',
       image: '/api/placeholder/300/300',
     },
+    {
+      name: 'Hamid Mehmood',
+      role: 'Manager OF YIWU SALAH TRADING',
+      description: 'Saad has been active in the supply chain industry for over 8 years. Starting out as a customs agent in Pakistan, he is currently on the ground in the Chinese market finding deals for our clients.',
+      image: '/api/placeholder/300/300',
+    }
   ]
 
   const missions = [
     'Bring enterprise level customer experience to the China SMB market',
     'Remove friction from international sourcing',
     'Mitigate risk for small businesses in doing foreign trade',
+    'Get the best shipping rates with transparent pricing and no hidden fees',
+    'Complete freight forwarding solutions covering every aspect of your shipment.',
+    'Timely and reliable delivery worldwide with our experienced logistics team'
   ]
 
   const values = [
@@ -101,10 +110,10 @@ export default function About() {
         <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
-              About YST - YIWU SALAH Trading
+              About YST - YIWU SALAH TRADING
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-medium">
-              Connecting worldwide businesses with verified manufacturers and suppliers worldwide through our comprehensive sourcing solutions.
+              Connecting worldwide businesses with verified manufacturers and suppliers through our comprehensive sourcing solutions.
             </p>
           </div>
         </div>
@@ -157,24 +166,24 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="ocean-card p-8"
+                className="ocean-card p-6"
               >
-                <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
-                  <div className="w-32 h-32 bg-gradient-to-br from-ocean-400 to-ocean-600 rounded-full flex items-center justify-center">
-                    <Users className="h-16 w-16 text-white" />
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-24 h-24 bg-gradient-to-br from-ocean-400 to-ocean-600 rounded-full flex items-center justify-center">
+                    <Users className="h-12 w-12 text-white" />
                   </div>
-                  <div className="text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-deep-800 mb-2">
+                  <div>
+                    <h3 className="text-xl font-bold text-deep-800 mb-2">
                       {member.name}
                     </h3>
-                    <p className="text-ocean-600 font-semibold mb-4">
+                    <p className="text-ocean-600 font-semibold mb-3 text-sm">
                       {member.role}
                     </p>
-                    <p className="text-deep-600 leading-relaxed">
+                    <p className="text-deep-600 leading-relaxed text-sm">
                       {member.description}
                     </p>
                   </div>

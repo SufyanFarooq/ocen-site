@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react'
+import { Mail, MapPin, Phone, Send, CheckCircle, MessageCircle } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 
 export default function Contact() {
@@ -89,9 +89,21 @@ export default function Contact() {
     },
     {
       icon: MapPin,
-      title: 'Address',
+      title: 'Pakistan Office Address',
       value: 'Pakistan office and warehouse address : ADD : G.T ROAD,SALAMT PURA STATION,KOH-E-NOOR KANTA, LAHORE',
-      description: 'Visit our office',
+      description: 'Visit our Pakistan office',
+    },
+    {
+      icon: MapPin,
+      title: 'China Office Address',
+      value: '浙江省金华市义乌市稠城街道车站路134号后面亿景建筑公司1楼 102',
+      description: 'Visit our China office',
+    },
+    {
+      icon: MessageCircle,
+      title: 'WeChat',
+      value: 'yiwusalahtrading',
+      description: 'Contact us on WeChat',
     },
   ]
 
@@ -323,7 +335,7 @@ export default function Contact() {
                         <h3 className="text-lg font-semibold text-deep-800 mb-1">
                           {info.title}
                         </h3>
-                        {info.title === 'Address' ? (
+                        {info.title === 'Pakistan Office Address' ? (
                           <a 
                             href="https://google.com/maps?q=31.588624954223633,74.41537475585938&z=17&hl=en"
                             target="_blank"

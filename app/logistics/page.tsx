@@ -62,7 +62,7 @@ export default function FreightShippingPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-white/90 max-w-4xl mx-auto"
           >
-            Reliable and cost-efficient international shipping solutions from Yiwu to destinations worldwide. 
+            Reliable and cost-efficient international shipping solutions from China to destinations worldwide. 
             Whether you need FCL or LCL services, we ensure your goods are handled with care and delivered on time.
           </motion.p>
         </div>

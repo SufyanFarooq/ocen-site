@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, MapPin, Phone, Ship, Globe, TrendingUp, Map, MessageCircle } from 'lucide-react'
+import { Mail, MapPin, Phone, Ship, Globe, TrendingUp, Map, MessageCircle, Facebook, Instagram } from 'lucide-react'
 
 const Footer = () => {
   const footerLinks = {
@@ -225,16 +225,46 @@ const Footer = () => {
           <div className="text-center text-[#E8ECEF] text-sm">
             © 2022-2025 YST - YIWU SALAH Trading. All rights reserved.
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
-              Terms of Service
-            </Link>
-            <Link href="/contact" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
-              Contact Us
-            </Link>
+          <div className="flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6">
+              <Link href="/privacy" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
+                Terms of Service
+              </Link>
+              <Link href="/contact" className="text-[#E8ECEF] hover:text-[var(--primary)] text-sm">
+                Contact Us
+              </Link>
+            </div>
+            
+            {/* Social Media Icons */}
+            <div className="flex space-x-4">
+              <Link 
+                href="https://facebook.com/yiwusalahtrading" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
+              >
+                <Facebook className="h-5 w-5" />
+              </Link>
+              <Link 
+                href="https://instagram.com/yiwusalahtrading" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
+              >
+                <Instagram className="h-5 w-5" />
+              </Link>
+              <Link 
+                href="https://wa.me/923244744890" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#E8ECEF] hover:text-[var(--primary)] transition-colors duration-200"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>

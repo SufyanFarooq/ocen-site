@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Stats() {
   return (
@@ -112,13 +113,15 @@ export default function Stats() {
           <p className="text-lg text-[#6C7A89] mb-6 font-inter">
             Ready to start your sourcing journey?
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-[var(--primary)] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[var(--primary-hover)] transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
-          >
-            Get Started Today
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[var(--primary)] text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-[var(--primary-hover)] transition-all duration-300 shadow-lg hover:shadow-xl font-poppins"
+            >
+              Get Started Today
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
