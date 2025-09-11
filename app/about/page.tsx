@@ -27,8 +27,8 @@ export default function About() {
     },
     {
       name: 'Hamid Mehmood',
-      role: 'Marketing Head OF YIWU SALAH TRADING',
-      description: 'Hamid brings extensive experience in digital marketing and business development to our team. He specializes in building strategic partnerships and expanding our market reach across international trade networks.',
+      role: 'Head Department of Pakistan, Lahore',
+      description: 'Hamid leads our operations in Pakistan, overseeing all business activities and client relations in the Lahore region. With his deep understanding of the local market and extensive network, he ensures seamless coordination between our Pakistan operations and international trade activities.',
       image: '/api/placeholder/300/300',
     }
   ]
