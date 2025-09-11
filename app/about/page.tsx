@@ -27,8 +27,8 @@ export default function About() {
     },
     {
       name: 'Hamid Mehmood',
-      role: 'Manager OF YIWU SALAH TRADING',
-      description: 'Saad has been active in the supply chain industry for over 8 years. Starting out as a customs agent in Pakistan, he is currently on the ground in the Chinese market finding deals for our clients.',
+      role: 'Marketing Head OF YIWU SALAH TRADING',
+      description: 'Hamid brings extensive experience in digital marketing and business development to our team. He specializes in building strategic partnerships and expanding our market reach across international trade networks.',
       image: '/api/placeholder/300/300',
     }
   ]

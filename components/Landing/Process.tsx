@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Users,
   ClipboardList,
@@ -11,6 +12,8 @@ import {
   ShieldCheck,
   BadgeCheck,
   Ship,
+  Container,
+  Package,
 } from "lucide-react";
 
 /* ---------------- helpers ---------------- */
@@ -266,6 +269,51 @@ export default function OrderProcessExact() {
           </div>
         </motion.div>
 
+         {/* FCL & LCL Buttons Section */}
+         <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="mt-8 md:mt-12"
+        >
+          <div className="bg-white rounded-3xl shadow-2xl border border-[#E8ECEF] p-6 md:p-8">
+            <div className="text-center mb-6">
+              <h3 className="text-lg md:text-xl font-bold text-[#3E5C76] mb-2">
+                Choose Your Shipping Method
+              </h3>
+              <p className="text-sm md:text-base text-[#6C7A89]">
+                Select the best shipping option for your cargo needs
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              {/* FCL Button */}
+              <Link href="/logistics" className="w-full sm:w-auto">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-48 bg-[#3E5C76] text-white px-6 py-4 rounded-2xl font-semibold text-base hover:bg-[#4A6B8A] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 font-poppins"
+                >
+                  <Container className="w-6 h-6" />
+                  <span>FCL Shipping</span>
+                </motion.button>
+              </Link>
+              
+              {/* LCL Button */}
+              <Link href="/logistics" className="w-full sm:w-auto">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-48 border-2 border-[#3E5C76] text-[#3E5C76] px-6 py-4 rounded-2xl font-semibold text-base hover:bg-[#3E5C76] hover:text-white transition-all duration-300 flex items-center justify-center space-x-3 font-poppins"
+                >
+                  <Package className="w-6 h-6" />
+                  <span>LCL Shipping</span>
+                </motion.button>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
@@ -329,6 +377,8 @@ export default function OrderProcessExact() {
             </div>
           </div>
         </motion.div>
+
+       
       </div>
     </section>
   );
